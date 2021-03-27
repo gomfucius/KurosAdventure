@@ -13,29 +13,19 @@
 		417790D1260FA2A600642589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790CF260FA2A600642589 /* Main.storyboard */; };
 		417790D3260FA2A700642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417790D2260FA2A700642589 /* Assets.xcassets */; };
 		417790D6260FA2A700642589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790D4260FA2A700642589 /* LaunchScreen.storyboard */; };
-		417790E1260FA2A700642589 /* KurosAdventureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790E0260FA2A700642589 /* KurosAdventureTests.swift */; };
-		417790EC260FA2A700642589 /* KurosAdventureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790EB260FA2A700642589 /* KurosAdventureUITests.swift */; };
+		41779107260FA2FD00642589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41779106260FA2FD00642589 /* AppDelegate.swift */; };
+		41779109260FA2FD00642589 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41779108260FA2FD00642589 /* ViewController.swift */; };
+		4177910B260FA2FE00642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4177910A260FA2FE00642589 /* Assets.xcassets */; };
+		4177910E260FA2FE00642589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4177910C260FA2FE00642589 /* Main.storyboard */; };
+		41779167260FA38F00642589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41779166260FA38F00642589 /* AppDelegate.swift */; };
+		41779169260FA38F00642589 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41779168260FA38F00642589 /* ViewController.swift */; };
+		4177916C260FA38F00642589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4177916A260FA38F00642589 /* Main.storyboard */; };
+		4177916E260FA39000642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4177916D260FA39000642589 /* Assets.xcassets */; };
+		41779171260FA39000642589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4177916F260FA39000642589 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		417790DD260FA2A700642589 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 417790BE260FA2A600642589 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 417790C5260FA2A600642589;
-			remoteInfo = KurosAdventure;
-		};
-		417790E8260FA2A700642589 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 417790BE260FA2A600642589 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 417790C5260FA2A600642589;
-			remoteInfo = KurosAdventure;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		417790C6260FA2A600642589 /* KurosAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KurosAdventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		417790C6260FA2A600642589 /* KurosAdventure (iOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KurosAdventure (iOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		417790C9260FA2A600642589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417790CB260FA2A600642589 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		417790CD260FA2A600642589 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,12 +33,20 @@
 		417790D2260FA2A700642589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		417790D5260FA2A700642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		417790D7260FA2A700642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		417790DC260FA2A700642589 /* KurosAdventureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KurosAdventureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		417790E0260FA2A700642589 /* KurosAdventureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurosAdventureTests.swift; sourceTree = "<group>"; };
-		417790E2260FA2A700642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		417790E7260FA2A700642589 /* KurosAdventureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KurosAdventureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		417790EB260FA2A700642589 /* KurosAdventureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurosAdventureUITests.swift; sourceTree = "<group>"; };
-		417790ED260FA2A700642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41779104260FA2FD00642589 /* KurosAdventure (macOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KurosAdventure (macOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41779106260FA2FD00642589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		41779108260FA2FD00642589 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4177910A260FA2FE00642589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4177910D260FA2FE00642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4177910F260FA2FE00642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41779110260FA2FE00642589 /* KurosAdventure.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KurosAdventure.entitlements; sourceTree = "<group>"; };
+		41779164260FA38F00642589 /* KurosAdventure (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KurosAdventure (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41779166260FA38F00642589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		41779168260FA38F00642589 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4177916B260FA38F00642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4177916D260FA39000642589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41779170260FA39000642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		41779172260FA39000642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,14 +57,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		417790D9260FA2A700642589 /* Frameworks */ = {
+		41779101260FA2FD00642589 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		417790E4260FA2A700642589 /* Frameworks */ = {
+		41779161260FA38F00642589 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,9 +77,10 @@
 		417790BD260FA2A600642589 = {
 			isa = PBXGroup;
 			children = (
-				417790C8260FA2A600642589 /* KurosAdventure */,
-				417790DF260FA2A700642589 /* KurosAdventureTests */,
-				417790EA260FA2A700642589 /* KurosAdventureUITests */,
+				417790FF260FA2C800642589 /* Shared */,
+				417790FE260FA2BB00642589 /* macOS */,
+				417790FC260FA2B100642589 /* iOS */,
+				41779165260FA38F00642589 /* tvOS */,
 				417790C7260FA2A600642589 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,51 +88,66 @@
 		417790C7260FA2A600642589 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				417790C6260FA2A600642589 /* KurosAdventure.app */,
-				417790DC260FA2A700642589 /* KurosAdventureTests.xctest */,
-				417790E7260FA2A700642589 /* KurosAdventureUITests.xctest */,
+				417790C6260FA2A600642589 /* KurosAdventure (iOS).app */,
+				41779104260FA2FD00642589 /* KurosAdventure (macOS).app */,
+				41779164260FA38F00642589 /* KurosAdventure (tvOS).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		417790C8260FA2A600642589 /* KurosAdventure */ = {
+		417790FC260FA2B100642589 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				417790D7260FA2A700642589 /* Info.plist */,
+				417790CF260FA2A600642589 /* Main.storyboard */,
+				417790D4260FA2A700642589 /* LaunchScreen.storyboard */,
 				417790C9260FA2A600642589 /* AppDelegate.swift */,
 				417790CB260FA2A600642589 /* SceneDelegate.swift */,
 				417790CD260FA2A600642589 /* ViewController.swift */,
-				417790CF260FA2A600642589 /* Main.storyboard */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		417790FE260FA2BB00642589 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				41779106260FA2FD00642589 /* AppDelegate.swift */,
+				41779108260FA2FD00642589 /* ViewController.swift */,
+				4177910A260FA2FE00642589 /* Assets.xcassets */,
+				4177910C260FA2FE00642589 /* Main.storyboard */,
+				4177910F260FA2FE00642589 /* Info.plist */,
+				41779110260FA2FE00642589 /* KurosAdventure.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		417790FF260FA2C800642589 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
 				417790D2260FA2A700642589 /* Assets.xcassets */,
-				417790D4260FA2A700642589 /* LaunchScreen.storyboard */,
-				417790D7260FA2A700642589 /* Info.plist */,
 			);
-			path = KurosAdventure;
+			path = Shared;
 			sourceTree = "<group>";
 		};
-		417790DF260FA2A700642589 /* KurosAdventureTests */ = {
+		41779165260FA38F00642589 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				417790E0260FA2A700642589 /* KurosAdventureTests.swift */,
-				417790E2260FA2A700642589 /* Info.plist */,
+				41779166260FA38F00642589 /* AppDelegate.swift */,
+				41779168260FA38F00642589 /* ViewController.swift */,
+				4177916A260FA38F00642589 /* Main.storyboard */,
+				4177916D260FA39000642589 /* Assets.xcassets */,
+				4177916F260FA39000642589 /* LaunchScreen.storyboard */,
+				41779172260FA39000642589 /* Info.plist */,
 			);
-			path = KurosAdventureTests;
-			sourceTree = "<group>";
-		};
-		417790EA260FA2A700642589 /* KurosAdventureUITests */ = {
-			isa = PBXGroup;
-			children = (
-				417790EB260FA2A700642589 /* KurosAdventureUITests.swift */,
-				417790ED260FA2A700642589 /* Info.plist */,
-			);
-			path = KurosAdventureUITests;
+			path = tvOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		417790C5260FA2A600642589 /* KurosAdventure */ = {
+		417790C5260FA2A600642589 /* KurosAdventure (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 417790F0260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventure" */;
+			buildConfigurationList = 417790F0260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventure (iOS)" */;
 			buildPhases = (
 				417790C2260FA2A600642589 /* Sources */,
 				417790C3260FA2A600642589 /* Frameworks */,
@@ -143,46 +157,44 @@
 			);
 			dependencies = (
 			);
-			name = KurosAdventure;
+			name = "KurosAdventure (iOS)";
 			productName = KurosAdventure;
-			productReference = 417790C6260FA2A600642589 /* KurosAdventure.app */;
+			productReference = 417790C6260FA2A600642589 /* KurosAdventure (iOS).app */;
 			productType = "com.apple.product-type.application";
 		};
-		417790DB260FA2A700642589 /* KurosAdventureTests */ = {
+		41779103260FA2FD00642589 /* KurosAdventure (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 417790F3260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventureTests" */;
+			buildConfigurationList = 41779127260FA2FE00642589 /* Build configuration list for PBXNativeTarget "KurosAdventure (macOS)" */;
 			buildPhases = (
-				417790D8260FA2A700642589 /* Sources */,
-				417790D9260FA2A700642589 /* Frameworks */,
-				417790DA260FA2A700642589 /* Resources */,
+				41779100260FA2FD00642589 /* Sources */,
+				41779101260FA2FD00642589 /* Frameworks */,
+				41779102260FA2FD00642589 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				417790DE260FA2A700642589 /* PBXTargetDependency */,
 			);
-			name = KurosAdventureTests;
-			productName = KurosAdventureTests;
-			productReference = 417790DC260FA2A700642589 /* KurosAdventureTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "KurosAdventure (macOS)";
+			productName = KurosAdventure;
+			productReference = 41779104260FA2FD00642589 /* KurosAdventure (macOS).app */;
+			productType = "com.apple.product-type.application";
 		};
-		417790E6260FA2A700642589 /* KurosAdventureUITests */ = {
+		41779163260FA38F00642589 /* KurosAdventure (tvOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 417790F6260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventureUITests" */;
+			buildConfigurationList = 41779173260FA39000642589 /* Build configuration list for PBXNativeTarget "KurosAdventure (tvOS)" */;
 			buildPhases = (
-				417790E3260FA2A700642589 /* Sources */,
-				417790E4260FA2A700642589 /* Frameworks */,
-				417790E5260FA2A700642589 /* Resources */,
+				41779160260FA38F00642589 /* Sources */,
+				41779161260FA38F00642589 /* Frameworks */,
+				41779162260FA38F00642589 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				417790E9260FA2A700642589 /* PBXTargetDependency */,
 			);
-			name = KurosAdventureUITests;
-			productName = KurosAdventureUITests;
-			productReference = 417790E7260FA2A700642589 /* KurosAdventureUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = "KurosAdventure (tvOS)";
+			productName = KurosAdventure;
+			productReference = 41779164260FA38F00642589 /* KurosAdventure (tvOS).app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -196,13 +208,11 @@
 					417790C5260FA2A600642589 = {
 						CreatedOnToolsVersion = 12.3;
 					};
-					417790DB260FA2A700642589 = {
+					41779103260FA2FD00642589 = {
 						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 417790C5260FA2A600642589;
 					};
-					417790E6260FA2A700642589 = {
+					41779163260FA38F00642589 = {
 						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 417790C5260FA2A600642589;
 					};
 				};
 			};
@@ -219,9 +229,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				417790C5260FA2A600642589 /* KurosAdventure */,
-				417790DB260FA2A700642589 /* KurosAdventureTests */,
-				417790E6260FA2A700642589 /* KurosAdventureUITests */,
+				417790C5260FA2A600642589 /* KurosAdventure (iOS) */,
+				41779103260FA2FD00642589 /* KurosAdventure (macOS) */,
+				41779163260FA38F00642589 /* KurosAdventure (tvOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -237,17 +247,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		417790DA260FA2A700642589 /* Resources */ = {
+		41779102260FA2FD00642589 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4177910B260FA2FE00642589 /* Assets.xcassets in Resources */,
+				4177910E260FA2FE00642589 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		417790E5260FA2A700642589 /* Resources */ = {
+		41779162260FA38F00642589 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41779171260FA39000642589 /* LaunchScreen.storyboard in Resources */,
+				4177916E260FA39000642589 /* Assets.xcassets in Resources */,
+				4177916C260FA38F00642589 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,36 +279,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		417790D8260FA2A700642589 /* Sources */ = {
+		41779100260FA2FD00642589 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				417790E1260FA2A700642589 /* KurosAdventureTests.swift in Sources */,
+				41779109260FA2FD00642589 /* ViewController.swift in Sources */,
+				41779107260FA2FD00642589 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		417790E3260FA2A700642589 /* Sources */ = {
+		41779160260FA38F00642589 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				417790EC260FA2A700642589 /* KurosAdventureUITests.swift in Sources */,
+				41779169260FA38F00642589 /* ViewController.swift in Sources */,
+				41779167260FA38F00642589 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		417790DE260FA2A700642589 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 417790C5260FA2A600642589 /* KurosAdventure */;
-			targetProxy = 417790DD260FA2A700642589 /* PBXContainerItemProxy */;
-		};
-		417790E9260FA2A700642589 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 417790C5260FA2A600642589 /* KurosAdventure */;
-			targetProxy = 417790E8260FA2A700642589 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		417790CF260FA2A600642589 /* Main.storyboard */ = {
@@ -308,6 +312,30 @@
 			isa = PBXVariantGroup;
 			children = (
 				417790D5260FA2A700642589 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4177910C260FA2FE00642589 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4177910D260FA2FE00642589 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4177916A260FA38F00642589 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4177916B260FA38F00642589 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4177916F260FA39000642589 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41779170260FA39000642589 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -438,7 +466,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5GKNB78UR;
-				INFOPLIST_FILE = KurosAdventure/Info.plist;
+				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +485,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5GKNB78UR;
-				INFOPLIST_FILE = KurosAdventure/Info.plist;
+				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,87 +497,91 @@
 			};
 			name = Release;
 		};
-		417790F4260FA2A700642589 /* Debug */ = {
+		41779128260FA2FE00642589 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/KurosAdventure.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = L5GKNB78UR;
-				INFOPLIST_FILE = KurosAdventureTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventureTests;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KurosAdventure.app/KurosAdventure";
 			};
 			name = Debug;
 		};
-		417790F5260FA2A700642589 /* Release */ = {
+		41779129260FA2FE00642589 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/KurosAdventure.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = L5GKNB78UR;
-				INFOPLIST_FILE = KurosAdventureTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventureTests;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KurosAdventure.app/KurosAdventure";
 			};
 			name = Release;
 		};
-		417790F7260FA2A700642589 /* Debug */ = {
+		41779174260FA39000642589 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5GKNB78UR;
-				INFOPLIST_FILE = KurosAdventureUITests/Info.plist;
+				INFOPLIST_FILE = tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventureUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KurosAdventure;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.3;
 			};
 			name = Debug;
 		};
-		417790F8260FA2A700642589 /* Release */ = {
+		41779175260FA39000642589 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5GKNB78UR;
-				INFOPLIST_FILE = KurosAdventureUITests/Info.plist;
+				INFOPLIST_FILE = tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventureUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KurosAdventure;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.3;
 			};
 			name = Release;
 		};
@@ -565,7 +597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		417790F0260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventure" */ = {
+		417790F0260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventure (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				417790F1260FA2A700642589 /* Debug */,
@@ -574,20 +606,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		417790F3260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventureTests" */ = {
+		41779127260FA2FE00642589 /* Build configuration list for PBXNativeTarget "KurosAdventure (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				417790F4260FA2A700642589 /* Debug */,
-				417790F5260FA2A700642589 /* Release */,
+				41779128260FA2FE00642589 /* Debug */,
+				41779129260FA2FE00642589 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		417790F6260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventureUITests" */ = {
+		41779173260FA39000642589 /* Build configuration list for PBXNativeTarget "KurosAdventure (tvOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				417790F7260FA2A700642589 /* Debug */,
-				417790F8260FA2A700642589 /* Release */,
+				41779174260FA39000642589 /* Debug */,
+				41779175260FA39000642589 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

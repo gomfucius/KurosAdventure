@@ -4,10 +4,48 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>KurosAdventure.xcscheme_^#shared#^_</key>
+		<key>KurosAdventure (iOS).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>KurosAdventure (macOS).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>KurosAdventure (tvOS).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>417790C5260FA2A600642589</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>417790DB260FA2A700642589</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>417790E6260FA2A700642589</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41779103260FA2FD00642589</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41779163260FA38F00642589</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
