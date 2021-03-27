@@ -1,0 +1,29 @@
+disabled_rules:
+  - line_length
+  - file_length
+  - variable_name
+  - discarded_notification_center_observer
+  - trailing_whitespace
+  - private_over_fileprivate
+  - trailing_comma
+  - type_name
+  - orphaned_doc_comment
+  - multiple_closures_with_trailing_closure
+excluded:
+
+force_cast: warning
+function_parameter_count: 8
+cyclomatic_complexity: 15
+shorthand_operator: warning # prefer variable += 1 style
+
+function_body_length: # how long a function can be
+  - 210 # warning
+  - 260 # error
+type_body_length: # how long a class can be
+  - 750 # warning
+  - 1000 # error
+type_name: # how long a class name can be
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 60
+    error: 100

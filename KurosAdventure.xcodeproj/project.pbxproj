@@ -3,50 +3,55 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		417790CA260FA2A600642589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790C9260FA2A600642589 /* AppDelegate.swift */; };
 		417790CC260FA2A600642589 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790CB260FA2A600642589 /* SceneDelegate.swift */; };
-		417790CE260FA2A600642589 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790CD260FA2A600642589 /* ViewController.swift */; };
 		417790D1260FA2A600642589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790CF260FA2A600642589 /* Main.storyboard */; };
 		417790D3260FA2A700642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417790D2260FA2A700642589 /* Assets.xcassets */; };
 		417790D6260FA2A700642589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790D4260FA2A700642589 /* LaunchScreen.storyboard */; };
 		41779107260FA2FD00642589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41779106260FA2FD00642589 /* AppDelegate.swift */; };
-		41779109260FA2FD00642589 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41779108260FA2FD00642589 /* ViewController.swift */; };
 		4177910B260FA2FE00642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4177910A260FA2FE00642589 /* Assets.xcassets */; };
 		4177910E260FA2FE00642589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4177910C260FA2FE00642589 /* Main.storyboard */; };
 		41779167260FA38F00642589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41779166260FA38F00642589 /* AppDelegate.swift */; };
-		41779169260FA38F00642589 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41779168260FA38F00642589 /* ViewController.swift */; };
 		4177916C260FA38F00642589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4177916A260FA38F00642589 /* Main.storyboard */; };
 		4177916E260FA39000642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4177916D260FA39000642589 /* Assets.xcassets */; };
 		41779171260FA39000642589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4177916F260FA39000642589 /* LaunchScreen.storyboard */; };
+		41779199260FA53400642589 /* GlideEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 41779198260FA53400642589 /* GlideEngine */; };
+		4177919E260FA56F00642589 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177919D260FA56F00642589 /* GameViewController.swift */; };
+		4177919F260FA56F00642589 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177919D260FA56F00642589 /* GameViewController.swift */; };
+		417791A0260FA56F00642589 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177919D260FA56F00642589 /* GameViewController.swift */; };
+		417791A5260FA5E000642589 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417791A4260FA5E000642589 /* Scene.swift */; };
+		417791A6260FA5E000642589 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417791A4260FA5E000642589 /* Scene.swift */; };
+		417791A7260FA5E000642589 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417791A4260FA5E000642589 /* Scene.swift */; };
+		417791B0260FA6F100642589 /* GlideEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 417791AF260FA6F100642589 /* GlideEngine */; };
+		417791B2260FA6F400642589 /* GlideEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 417791B1260FA6F400642589 /* GlideEngine */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		417790C6260FA2A600642589 /* KurosAdventure (iOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KurosAdventure (iOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		417790C9260FA2A600642589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417790CB260FA2A600642589 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		417790CD260FA2A600642589 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		417790D0260FA2A600642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		417790D2260FA2A700642589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		417790D5260FA2A700642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		417790D7260FA2A700642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41779104260FA2FD00642589 /* KurosAdventure (macOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KurosAdventure (macOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41779106260FA2FD00642589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41779108260FA2FD00642589 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4177910A260FA2FE00642589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4177910D260FA2FE00642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4177910F260FA2FE00642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41779110260FA2FE00642589 /* KurosAdventure.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KurosAdventure.entitlements; sourceTree = "<group>"; };
 		41779164260FA38F00642589 /* KurosAdventure (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KurosAdventure (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41779166260FA38F00642589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41779168260FA38F00642589 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4177916B260FA38F00642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4177916D260FA39000642589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41779170260FA39000642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41779172260FA39000642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4177919D260FA56F00642589 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		417791A4260FA5E000642589 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41779199260FA53400642589 /* GlideEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417791B0260FA6F100642589 /* GlideEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417791B2260FA6F400642589 /* GlideEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +90,7 @@
 				417790FC260FA2B100642589 /* iOS */,
 				41779165260FA38F00642589 /* tvOS */,
 				417790C7260FA2A600642589 /* Products */,
+				417791AE260FA6F100642589 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +112,6 @@
 				417790D4260FA2A700642589 /* LaunchScreen.storyboard */,
 				417790C9260FA2A600642589 /* AppDelegate.swift */,
 				417790CB260FA2A600642589 /* SceneDelegate.swift */,
-				417790CD260FA2A600642589 /* ViewController.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -112,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				41779106260FA2FD00642589 /* AppDelegate.swift */,
-				41779108260FA2FD00642589 /* ViewController.swift */,
 				4177910A260FA2FE00642589 /* Assets.xcassets */,
 				4177910C260FA2FE00642589 /* Main.storyboard */,
 				4177910F260FA2FE00642589 /* Info.plist */,
@@ -125,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				417790D2260FA2A700642589 /* Assets.xcassets */,
+				4177919D260FA56F00642589 /* GameViewController.swift */,
+				417791A4260FA5E000642589 /* Scene.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -133,13 +142,19 @@
 			isa = PBXGroup;
 			children = (
 				41779166260FA38F00642589 /* AppDelegate.swift */,
-				41779168260FA38F00642589 /* ViewController.swift */,
 				4177916A260FA38F00642589 /* Main.storyboard */,
 				4177916D260FA39000642589 /* Assets.xcassets */,
 				4177916F260FA39000642589 /* LaunchScreen.storyboard */,
 				41779172260FA39000642589 /* Info.plist */,
 			);
 			path = tvOS;
+			sourceTree = "<group>";
+		};
+		417791AE260FA6F100642589 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,12 +167,16 @@
 				417790C2260FA2A600642589 /* Sources */,
 				417790C3260FA2A600642589 /* Frameworks */,
 				417790C4260FA2A600642589 /* Resources */,
+				417791B6260FA7A000642589 /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "KurosAdventure (iOS)";
+			packageProductDependencies = (
+				41779198260FA53400642589 /* GlideEngine */,
+			);
 			productName = KurosAdventure;
 			productReference = 417790C6260FA2A600642589 /* KurosAdventure (iOS).app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +194,9 @@
 			dependencies = (
 			);
 			name = "KurosAdventure (macOS)";
+			packageProductDependencies = (
+				417791AF260FA6F100642589 /* GlideEngine */,
+			);
 			productName = KurosAdventure;
 			productReference = 41779104260FA2FD00642589 /* KurosAdventure (macOS).app */;
 			productType = "com.apple.product-type.application";
@@ -192,6 +214,9 @@
 			dependencies = (
 			);
 			name = "KurosAdventure (tvOS)";
+			packageProductDependencies = (
+				417791B1260FA6F400642589 /* GlideEngine */,
+			);
 			productName = KurosAdventure;
 			productReference = 41779164260FA38F00642589 /* KurosAdventure (tvOS).app */;
 			productType = "com.apple.product-type.application";
@@ -225,6 +250,9 @@
 				Base,
 			);
 			mainGroup = 417790BD260FA2A600642589;
+			packageReferences = (
+				41779197260FA53400642589 /* XCRemoteSwiftPackageReference "Glide" */,
+			);
 			productRefGroup = 417790C7260FA2A600642589 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,12 +296,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		417791B6260FA7A000642589 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		417790C2260FA2A600642589 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				417790CE260FA2A600642589 /* ViewController.swift in Sources */,
+				4177919E260FA56F00642589 /* GameViewController.swift in Sources */,
+				417791A5260FA5E000642589 /* Scene.swift in Sources */,
 				417790CA260FA2A600642589 /* AppDelegate.swift in Sources */,
 				417790CC260FA2A600642589 /* SceneDelegate.swift in Sources */,
 			);
@@ -283,7 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41779109260FA2FD00642589 /* ViewController.swift in Sources */,
+				417791A6260FA5E000642589 /* Scene.swift in Sources */,
+				4177919F260FA56F00642589 /* GameViewController.swift in Sources */,
 				41779107260FA2FD00642589 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +343,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41779169260FA38F00642589 /* ViewController.swift in Sources */,
+				417791A7260FA5E000642589 /* Scene.swift in Sources */,
+				417791A0260FA56F00642589 /* GameViewController.swift in Sources */,
 				41779167260FA38F00642589 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,6 +677,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41779197260FA53400642589 /* XCRemoteSwiftPackageReference "Glide" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cocoatoucher/Glide";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41779198260FA53400642589 /* GlideEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41779197260FA53400642589 /* XCRemoteSwiftPackageReference "Glide" */;
+			productName = GlideEngine;
+		};
+		417791AF260FA6F100642589 /* GlideEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41779197260FA53400642589 /* XCRemoteSwiftPackageReference "Glide" */;
+			productName = GlideEngine;
+		};
+		417791B1260FA6F400642589 /* GlideEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41779197260FA53400642589 /* XCRemoteSwiftPackageReference "Glide" */;
+			productName = GlideEngine;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 417790BE260FA2A600642589 /* Project object */;
 }
