@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		417790CA260FA2A600642589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790C9260FA2A600642589 /* AppDelegate.swift */; };
+		417790CC260FA2A600642589 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790CB260FA2A600642589 /* SceneDelegate.swift */; };
+		417790CE260FA2A600642589 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790CD260FA2A600642589 /* ViewController.swift */; };
+		417790D1260FA2A600642589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790CF260FA2A600642589 /* Main.storyboard */; };
+		417790D3260FA2A700642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417790D2260FA2A700642589 /* Assets.xcassets */; };
+		417790D6260FA2A700642589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790D4260FA2A700642589 /* LaunchScreen.storyboard */; };
+		417790E1260FA2A700642589 /* KurosAdventureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790E0260FA2A700642589 /* KurosAdventureTests.swift */; };
+		417790EC260FA2A700642589 /* KurosAdventureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790EB260FA2A700642589 /* KurosAdventureUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		417790DD260FA2A700642589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 417790BE260FA2A600642589 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 417790C5260FA2A600642589;
+			remoteInfo = KurosAdventure;
+		};
+		417790E8260FA2A700642589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 417790BE260FA2A600642589 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 417790C5260FA2A600642589;
+			remoteInfo = KurosAdventure;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		417790C6260FA2A600642589 /* KurosAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KurosAdventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		417790C9260FA2A600642589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		417790CB260FA2A600642589 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		417790CD260FA2A600642589 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		417790D0260FA2A600642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		417790D2260FA2A700642589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		417790D5260FA2A700642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		417790D7260FA2A700642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		417790DC260FA2A700642589 /* KurosAdventureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KurosAdventureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		417790E0260FA2A700642589 /* KurosAdventureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurosAdventureTests.swift; sourceTree = "<group>"; };
+		417790E2260FA2A700642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		417790E7260FA2A700642589 /* KurosAdventureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KurosAdventureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		417790EB260FA2A700642589 /* KurosAdventureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurosAdventureUITests.swift; sourceTree = "<group>"; };
+		417790ED260FA2A700642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		417790C3260FA2A600642589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		417790D9260FA2A700642589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		417790E4260FA2A700642589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		417790BD260FA2A600642589 = {
+			isa = PBXGroup;
+			children = (
+				417790C8260FA2A600642589 /* KurosAdventure */,
+				417790DF260FA2A700642589 /* KurosAdventureTests */,
+				417790EA260FA2A700642589 /* KurosAdventureUITests */,
+				417790C7260FA2A600642589 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		417790C7260FA2A600642589 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				417790C6260FA2A600642589 /* KurosAdventure.app */,
+				417790DC260FA2A700642589 /* KurosAdventureTests.xctest */,
+				417790E7260FA2A700642589 /* KurosAdventureUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		417790C8260FA2A600642589 /* KurosAdventure */ = {
+			isa = PBXGroup;
+			children = (
+				417790C9260FA2A600642589 /* AppDelegate.swift */,
+				417790CB260FA2A600642589 /* SceneDelegate.swift */,
+				417790CD260FA2A600642589 /* ViewController.swift */,
+				417790CF260FA2A600642589 /* Main.storyboard */,
+				417790D2260FA2A700642589 /* Assets.xcassets */,
+				417790D4260FA2A700642589 /* LaunchScreen.storyboard */,
+				417790D7260FA2A700642589 /* Info.plist */,
+			);
+			path = KurosAdventure;
+			sourceTree = "<group>";
+		};
+		417790DF260FA2A700642589 /* KurosAdventureTests */ = {
+			isa = PBXGroup;
+			children = (
+				417790E0260FA2A700642589 /* KurosAdventureTests.swift */,
+				417790E2260FA2A700642589 /* Info.plist */,
+			);
+			path = KurosAdventureTests;
+			sourceTree = "<group>";
+		};
+		417790EA260FA2A700642589 /* KurosAdventureUITests */ = {
+			isa = PBXGroup;
+			children = (
+				417790EB260FA2A700642589 /* KurosAdventureUITests.swift */,
+				417790ED260FA2A700642589 /* Info.plist */,
+			);
+			path = KurosAdventureUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		417790C5260FA2A600642589 /* KurosAdventure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 417790F0260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventure" */;
+			buildPhases = (
+				417790C2260FA2A600642589 /* Sources */,
+				417790C3260FA2A600642589 /* Frameworks */,
+				417790C4260FA2A600642589 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KurosAdventure;
+			productName = KurosAdventure;
+			productReference = 417790C6260FA2A600642589 /* KurosAdventure.app */;
+			productType = "com.apple.product-type.application";
+		};
+		417790DB260FA2A700642589 /* KurosAdventureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 417790F3260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventureTests" */;
+			buildPhases = (
+				417790D8260FA2A700642589 /* Sources */,
+				417790D9260FA2A700642589 /* Frameworks */,
+				417790DA260FA2A700642589 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				417790DE260FA2A700642589 /* PBXTargetDependency */,
+			);
+			name = KurosAdventureTests;
+			productName = KurosAdventureTests;
+			productReference = 417790DC260FA2A700642589 /* KurosAdventureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		417790E6260FA2A700642589 /* KurosAdventureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 417790F6260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventureUITests" */;
+			buildPhases = (
+				417790E3260FA2A700642589 /* Sources */,
+				417790E4260FA2A700642589 /* Frameworks */,
+				417790E5260FA2A700642589 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				417790E9260FA2A700642589 /* PBXTargetDependency */,
+			);
+			name = KurosAdventureUITests;
+			productName = KurosAdventureUITests;
+			productReference = 417790E7260FA2A700642589 /* KurosAdventureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		417790BE260FA2A600642589 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					417790C5260FA2A600642589 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					417790DB260FA2A700642589 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 417790C5260FA2A600642589;
+					};
+					417790E6260FA2A700642589 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 417790C5260FA2A600642589;
+					};
+				};
+			};
+			buildConfigurationList = 417790C1260FA2A600642589 /* Build configuration list for PBXProject "KurosAdventure" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 417790BD260FA2A600642589;
+			productRefGroup = 417790C7260FA2A600642589 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				417790C5260FA2A600642589 /* KurosAdventure */,
+				417790DB260FA2A700642589 /* KurosAdventureTests */,
+				417790E6260FA2A700642589 /* KurosAdventureUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		417790C4260FA2A600642589 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417790D6260FA2A700642589 /* LaunchScreen.storyboard in Resources */,
+				417790D3260FA2A700642589 /* Assets.xcassets in Resources */,
+				417790D1260FA2A600642589 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		417790DA260FA2A700642589 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		417790E5260FA2A700642589 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		417790C2260FA2A600642589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417790CE260FA2A600642589 /* ViewController.swift in Sources */,
+				417790CA260FA2A600642589 /* AppDelegate.swift in Sources */,
+				417790CC260FA2A600642589 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		417790D8260FA2A700642589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417790E1260FA2A700642589 /* KurosAdventureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		417790E3260FA2A700642589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				417790EC260FA2A700642589 /* KurosAdventureUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		417790DE260FA2A700642589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 417790C5260FA2A600642589 /* KurosAdventure */;
+			targetProxy = 417790DD260FA2A700642589 /* PBXContainerItemProxy */;
+		};
+		417790E9260FA2A700642589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 417790C5260FA2A600642589 /* KurosAdventure */;
+			targetProxy = 417790E8260FA2A700642589 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		417790CF260FA2A600642589 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				417790D0260FA2A600642589 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		417790D4260FA2A700642589 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				417790D5260FA2A700642589 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		417790EE260FA2A700642589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		417790EF260FA2A700642589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		417790F1260FA2A700642589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				INFOPLIST_FILE = KurosAdventure/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventure;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		417790F2260FA2A700642589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				INFOPLIST_FILE = KurosAdventure/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventure;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		417790F4260FA2A700642589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				INFOPLIST_FILE = KurosAdventureTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KurosAdventure.app/KurosAdventure";
+			};
+			name = Debug;
+		};
+		417790F5260FA2A700642589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				INFOPLIST_FILE = KurosAdventureTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KurosAdventure.app/KurosAdventure";
+			};
+			name = Release;
+		};
+		417790F7260FA2A700642589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				INFOPLIST_FILE = KurosAdventureUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KurosAdventure;
+			};
+			name = Debug;
+		};
+		417790F8260FA2A700642589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				INFOPLIST_FILE = KurosAdventureUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.KurosAdventureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KurosAdventure;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		417790C1260FA2A600642589 /* Build configuration list for PBXProject "KurosAdventure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417790EE260FA2A700642589 /* Debug */,
+				417790EF260FA2A700642589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		417790F0260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417790F1260FA2A700642589 /* Debug */,
+				417790F2260FA2A700642589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		417790F3260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417790F4260FA2A700642589 /* Debug */,
+				417790F5260FA2A700642589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		417790F6260FA2A700642589 /* Build configuration list for PBXNativeTarget "KurosAdventureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417790F7260FA2A700642589 /* Debug */,
+				417790F8260FA2A700642589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 417790BE260FA2A600642589 /* Project object */;
+}
