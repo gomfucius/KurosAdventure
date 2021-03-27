@@ -11,7 +11,7 @@ import GameplayKit
 final class CharacterEntity: GlideEntity {
     
     override func setup() {
-        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 64, height: 64))
+        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 120, height: 165))
         spriteNodeComponent.spriteNode.texture = SKTexture(imageNamed: "character_walk_0")
         addComponent(spriteNodeComponent) 
         
