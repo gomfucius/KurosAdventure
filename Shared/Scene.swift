@@ -13,9 +13,9 @@ class Scene: GlideScene {
     override func setupScene() {
         shouldPauseWhenAppIsInBackground = false
         backgroundColor = .brown
-        addEntity(platformEntity(at: CGPoint(x: 512, y: 50)))
+        addEntity(platformEntity(at: CGPoint(x: 512, y: 150)))
         
-        let character = CharacterEntity(initialNodePosition: CGPoint(x: 512, y: 300))
+        let character = CharacterEntity(initialNodePosition: CGPoint(x: 200, y: 300))
         addEntity(character)
         
         #if os(iOS)
@@ -40,7 +40,7 @@ class Scene: GlideScene {
         
         let colliderComponent = ColliderComponent(
             categoryMask: GlideCategoryMask.none,
-            size: CGSize(width: 100, height: 135),
+            size: CGSize(width: 640, height: 64),
             offset: .zero,
             leftHitPointsOffsets: (10, 10),
             rightHitPointsOffsets: (10, 10),
