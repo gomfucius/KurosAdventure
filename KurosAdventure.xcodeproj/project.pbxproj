@@ -10,7 +10,7 @@
 		417790CA260FA2A600642589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790C9260FA2A600642589 /* AppDelegate.swift */; };
 		417790CC260FA2A600642589 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790CB260FA2A600642589 /* SceneDelegate.swift */; };
 		417790D1260FA2A600642589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790CF260FA2A600642589 /* Main.storyboard */; };
-		417790D3260FA2A700642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417790D2260FA2A700642589 /* Assets.xcassets */; };
+		417790D3260FA2A700642589 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417790D2260FA2A700642589 /* SharedAssets.xcassets */; };
 		417790D6260FA2A700642589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790D4260FA2A700642589 /* LaunchScreen.storyboard */; };
 		41779107260FA2FD00642589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41779106260FA2FD00642589 /* AppDelegate.swift */; };
 		4177910B260FA2FE00642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4177910A260FA2FE00642589 /* Assets.xcassets */; };
@@ -31,9 +31,18 @@
 		417791C7260FA9D300642589 /* CharacterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417791C6260FA9D300642589 /* CharacterEntity.swift */; };
 		417791C8260FA9D300642589 /* CharacterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417791C6260FA9D300642589 /* CharacterEntity.swift */; };
 		417791C9260FA9D300642589 /* CharacterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417791C6260FA9D300642589 /* CharacterEntity.swift */; };
-		417791D0260FAD0600642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417790D2260FA2A700642589 /* Assets.xcassets */; };
-		417791D4260FAD0600642589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417790D2260FA2A700642589 /* Assets.xcassets */; };
+		417791D0260FAD0600642589 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417790D2260FA2A700642589 /* SharedAssets.xcassets */; };
+		417791D4260FAD0600642589 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417790D2260FA2A700642589 /* SharedAssets.xcassets */; };
 		417791EB260FC98600642589 /* TouchButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417791E1260FB93300642589 /* TouchButtonComponent.swift */; };
+		4177925B260FDCD800642589 /* TestMap.json in Resources */ = {isa = PBXBuildFile; fileRef = 41779246260FDCD800642589 /* TestMap.json */; };
+		4177925C260FDCD800642589 /* TestMap.json in Resources */ = {isa = PBXBuildFile; fileRef = 41779246260FDCD800642589 /* TestMap.json */; };
+		4177925D260FDCD800642589 /* TestMap.json in Resources */ = {isa = PBXBuildFile; fileRef = 41779246260FDCD800642589 /* TestMap.json */; };
+		41779294260FDCD800642589 /* GlideColliderTileSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 4177925A260FDCD800642589 /* GlideColliderTileSet.json */; };
+		41779295260FDCD800642589 /* GlideColliderTileSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 4177925A260FDCD800642589 /* GlideColliderTileSet.json */; };
+		41779296260FDCD800642589 /* GlideColliderTileSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 4177925A260FDCD800642589 /* GlideColliderTileSet.json */; };
+		417792B026101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */; };
+		417792B126101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */; };
+		417792B226101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +50,7 @@
 		417790C9260FA2A600642589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417790CB260FA2A600642589 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		417790D0260FA2A600642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		417790D2260FA2A700642589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		417790D2260FA2A700642589 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
 		417790D5260FA2A700642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		417790D7260FA2A700642589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41779104260FA2FD00642589 /* KurosAdventure (macOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KurosAdventure (macOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +69,9 @@
 		417791A4260FA5E000642589 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		417791C6260FA9D300642589 /* CharacterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntity.swift; sourceTree = "<group>"; };
 		417791E1260FB93300642589 /* TouchButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchButtonComponent.swift; sourceTree = "<group>"; };
+		41779246260FDCD800642589 /* TestMap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestMap.json; sourceTree = "<group>"; };
+		4177925A260FDCD800642589 /* GlideColliderTileSet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GlideColliderTileSet.json; sourceTree = "<group>"; };
+		417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxBackgroundEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +151,12 @@
 		417790FF260FA2C800642589 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				417790D2260FA2A700642589 /* Assets.xcassets */,
 				417791C6260FA9D300642589 /* CharacterEntity.swift */,
+				417792AE26101A6900642589 /* Entities */,
 				4177919D260FA56F00642589 /* GameViewController.swift */,
 				417791A4260FA5E000642589 /* Scene.swift */,
+				417790D2260FA2A700642589 /* SharedAssets.xcassets */,
+				41779245260FDCD800642589 /* Tiles */,
 				417791E1260FB93300642589 /* TouchButtonComponent.swift */,
 			);
 			path = Shared;
@@ -165,6 +179,23 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41779245260FDCD800642589 /* Tiles */ = {
+			isa = PBXGroup;
+			children = (
+				41779246260FDCD800642589 /* TestMap.json */,
+				4177925A260FDCD800642589 /* GlideColliderTileSet.json */,
+			);
+			path = Tiles;
+			sourceTree = "<group>";
+		};
+		417792AE26101A6900642589 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				417790D6260FA2A700642589 /* LaunchScreen.storyboard in Resources */,
-				417790D3260FA2A700642589 /* Assets.xcassets in Resources */,
+				417790D3260FA2A700642589 /* SharedAssets.xcassets in Resources */,
+				41779294260FDCD800642589 /* GlideColliderTileSet.json in Resources */,
+				4177925B260FDCD800642589 /* TestMap.json in Resources */,
 				417790D1260FA2A600642589 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +323,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4177910B260FA2FE00642589 /* Assets.xcassets in Resources */,
-				417791D0260FAD0600642589 /* Assets.xcassets in Resources */,
+				417791D0260FAD0600642589 /* SharedAssets.xcassets in Resources */,
+				41779295260FDCD800642589 /* GlideColliderTileSet.json in Resources */,
+				4177925C260FDCD800642589 /* TestMap.json in Resources */,
 				4177910E260FA2FE00642589 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +336,9 @@
 			files = (
 				41779171260FA39000642589 /* LaunchScreen.storyboard in Resources */,
 				4177916E260FA39000642589 /* Assets.xcassets in Resources */,
-				417791D4260FAD0600642589 /* Assets.xcassets in Resources */,
+				4177925D260FDCD800642589 /* TestMap.json in Resources */,
+				417791D4260FAD0600642589 /* SharedAssets.xcassets in Resources */,
+				41779296260FDCD800642589 /* GlideColliderTileSet.json in Resources */,
 				4177916C260FA38F00642589 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +377,7 @@
 				417791A5260FA5E000642589 /* Scene.swift in Sources */,
 				417790CA260FA2A600642589 /* AppDelegate.swift in Sources */,
 				417790CC260FA2A600642589 /* SceneDelegate.swift in Sources */,
+				417792B026101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417791A6260FA5E000642589 /* Scene.swift in Sources */,
+				417792B126101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */,
 				4177919F260FA56F00642589 /* GameViewController.swift in Sources */,
 				417791C8260FA9D300642589 /* CharacterEntity.swift in Sources */,
 				41779107260FA2FD00642589 /* AppDelegate.swift in Sources */,
@@ -359,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417791A7260FA5E000642589 /* Scene.swift in Sources */,
+				417792B226101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */,
 				417791A0260FA56F00642589 /* GameViewController.swift in Sources */,
 				417791C9260FA9D300642589 /* CharacterEntity.swift in Sources */,
 				41779167260FA38F00642589 /* AppDelegate.swift in Sources */,
