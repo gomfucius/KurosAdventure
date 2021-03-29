@@ -22,7 +22,10 @@ final class CharacterEntity: GlideEntity {
         addComponent(spriteNodeComponent)
         
         var kinematicsBodyConfiguration = KinematicsBodyComponent.sharedConfiguration
+        kinematicsBodyConfiguration.gravity = 60
         kinematicsBodyConfiguration.maximumVerticalVelocity = 20
+        kinematicsBodyConfiguration.maximumHorizontalVelocity = 10
+        kinematicsBodyConfiguration.metersToScreenPoints = 27
         let kinematicsBodyComponent = KinematicsBodyComponent(configuration: kinematicsBodyConfiguration)
         addComponent(kinematicsBodyComponent)
         
@@ -44,12 +47,6 @@ final class CharacterEntity: GlideEntity {
         let snapperComponent = SnapperComponent()
         addComponent(snapperComponent)
         
-        var config = HorizontalMovementComponent.sharedConfiguration
-        config.fixedVelocity = 15
-        
-        let horizontalMovementComponent = HorizontalMovementComponent(movementStyle: .fixedVelocity, configuration: config)
-        addComponent(horizontalMovementComponent)
-        
         let playableCharacterComponent = PlayableCharacterComponent(playerIndex: 0)
         addComponent(playableCharacterComponent)
         
@@ -57,8 +54,17 @@ final class CharacterEntity: GlideEntity {
         let characterComponent = CharacterComponent()
         addComponent(characterComponent)
         
+        var config = HorizontalMovementComponent.sharedConfiguration
+        config.acceleration = 70
+        config.deceleration = 90
+        let horizontalMovementComponent = HorizontalMovementComponent(movementStyle: .accelerated, configuration: config)
+        addComponent(horizontalMovementComponent)
+        
         var jumpConfiguration = JumpComponent.sharedConfiguration
-        jumpConfiguration.jumpingVelocity = 16
+        jumpConfiguration.jumpingVelocity = 20
+        jumpConfiguration.fasterVerticalVelocityDiff = 1
+        jumpConfiguration.serialJumpThreshold = 0.2
+        jumpConfiguration.isCornerJumpsEnabled = true
         let jumpComponent = JumpComponent(configuration: jumpConfiguration)
         addComponent(jumpComponent)
     }
