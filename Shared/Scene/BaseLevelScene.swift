@@ -1,8 +1,8 @@
 //
-//  Scene.swift
+//  BaseLevelScene.swift
 //  KurosAdventure
 //
-//  Created by Genki Mine on 3/27/21.
+//  Created by Genki Mine on 3/28/21.
 //
 
 import GlideEngine
@@ -50,8 +50,22 @@ class BaseLevelScene: GlideScene {
         super.init(collisionTileMapNode: tileMaps.collisionTileMap, zPositionContainers: DemoZPositionContainer.allCases)
     }
     
+    deinit {
+        if let observation = inputMethodObservation {
+            NotificationCenter.default.removeObserver(observation)
+        }
+        if let observation = conversationDidStartObservation {
+            NotificationCenter.default.removeObserver(observation)
+        }
+        if let observation = conversationDidEndObservation {
+            NotificationCenter.default.removeObserver(observation)
+        }
+    }
+    
+    // MARK: - GlideScene
+    
     override func setupScene() {
-        cameraEntity.component(ofType: CameraComponent.self)?.configuration.fieldOfViewWidth = 3000.0
+        cameraEntity.component(ofType: CameraComponent.self)?.configuration.fieldOfViewWidth = 8000
         
         let groundBackground = tileMaps.decorationTileMaps[0]
         groundBackground.position = collisionTileMapNode?.position ?? .zero
@@ -89,8 +103,19 @@ class BaseLevelScene: GlideScene {
         #endif
     }
     
+    // MARK: - Private
+    
     #if os(iOS)
-    lazy var moveLeftTouchButtonEntity: GlideEntity = {
+    private func configureControls() {
+        if Input.shared.inputMethod.isTouchesEnabled && isInConversation == false {
+            activateTouchControls()
+            layoutTouchControls()
+        } else {
+            deactivateTouchControls()
+        }
+    }
+    
+    private lazy var moveLeftTouchButtonEntity: GlideEntity = {
         let entity = GlideEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Move Left"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 120, height: 100), triggersOnTouchUpInside: false, input: .profiles([(name: "Player1_Horizontal", isNegative: true)]))
@@ -100,7 +125,7 @@ class BaseLevelScene: GlideScene {
         entity.addComponent(touchButtonComponent)
         return entity
     }()
-    lazy var moveRightTouchButtonEntity: GlideEntity = {
+    private lazy var moveRightTouchButtonEntity: GlideEntity = {
         let entity = GlideEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Move Right"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 120, height: 100), triggersOnTouchUpInside: false, input: .profiles([(name: "Player1_Horizontal", isNegative: false)]))
@@ -110,7 +135,7 @@ class BaseLevelScene: GlideScene {
         entity.addComponent(touchButtonComponent)
         return entity
     }()
-    lazy var jumpTouchButtonEntity: GlideEntity = {
+    private lazy var jumpTouchButtonEntity: GlideEntity = {
         let entity = GlideEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Jump"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 120, height: 100), triggersOnTouchUpInside: false, input: .profiles([(name: "Player1_Jump", isNegative: false)]))
@@ -121,7 +146,7 @@ class BaseLevelScene: GlideScene {
         return entity
     }()
     
-    var shouldDisplayAdditionalTouchButton: Bool = false {
+    private var shouldDisplayAdditionalTouchButton: Bool = false {
         didSet {
             if shouldDisplayAdditionalTouchButton {
                 if Input.shared.inputMethod.isTouchesEnabled {
@@ -133,7 +158,7 @@ class BaseLevelScene: GlideScene {
         }
     }
     
-    var shouldDisplaySecondAdditionalTouchButton: Bool = false {
+    private var shouldDisplaySecondAdditionalTouchButton: Bool = false {
         didSet {
             if shouldDisplaySecondAdditionalTouchButton {
                 if Input.shared.inputMethod.isTouchesEnabled {
@@ -145,7 +170,7 @@ class BaseLevelScene: GlideScene {
         }
     }
     
-    lazy var additionalTouchButtonEntity: GlideEntity = {
+    private lazy var additionalTouchButtonEntity: GlideEntity = {
         let entity = GlideEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Additional Button"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 70, height: 100), triggersOnTouchUpInside: false, input: .callback({}))
@@ -155,7 +180,7 @@ class BaseLevelScene: GlideScene {
         entity.addComponent(touchButtonComponent)
         return entity
     }()
-    lazy var secondAdditionalTouchButtonEntity: GlideEntity = {
+    private lazy var secondAdditionalTouchButtonEntity: GlideEntity = {
         let entity = GlideEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Second Additional Button"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 70, height: 100), triggersOnTouchUpInside: false, input: .callback({}))
@@ -165,7 +190,7 @@ class BaseLevelScene: GlideScene {
         entity.addComponent(touchButtonComponent)
         return entity
     }()
-    lazy var pauseButtonEntity: GlideEntity = {
+    private lazy var pauseButtonEntity: GlideEntity = {
         let entity = GlideEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Pause"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 44, height: 44),
@@ -180,16 +205,7 @@ class BaseLevelScene: GlideScene {
         return entity
     }()
     
-    func configureControls() {
-        if Input.shared.inputMethod.isTouchesEnabled && isInConversation == false {
-            activateTouchControls()
-            layoutTouchControls()
-        } else {
-            deactivateTouchControls()
-        }
-    }
-    
-    func activateTouchControls() {
+    private func activateTouchControls() {
         addEntity(moveLeftTouchButtonEntity)
         addEntity(moveRightTouchButtonEntity)
         addEntity(jumpTouchButtonEntity)
@@ -202,7 +218,7 @@ class BaseLevelScene: GlideScene {
         addEntity(pauseButtonEntity)
     }
     
-    func deactivateTouchControls() {
+    private func deactivateTouchControls() {
         removeEntity(moveLeftTouchButtonEntity)
         removeEntity(moveRightTouchButtonEntity)
         removeEntity(jumpTouchButtonEntity)
@@ -211,8 +227,7 @@ class BaseLevelScene: GlideScene {
         removeEntity(pauseButtonEntity)
     }
     
-    // swiftlint:disable:next function_body_length
-    func layoutTouchControls() {
+    private func layoutTouchControls() {
         if let moveLeftNode = moveLeftTouchButtonEntity.component(ofType: TouchButtonComponent.self)?.hitBoxNode {
             let nodePositionX = -size.width / 2 + moveLeftNode.size.width / 2 + 30
             let nodePositionY = -size.height / 2 + moveLeftNode.size.height / 2 + 30
@@ -269,205 +284,6 @@ class BaseLevelScene: GlideScene {
             pauseButtonEntity.transform.proposedPosition = nodePosition
         }
     }
-    #endif
-    
-    deinit {
-        if let observation = inputMethodObservation {
-            NotificationCenter.default.removeObserver(observation)
-        }
-        if let observation = conversationDidStartObservation {
-            NotificationCenter.default.removeObserver(observation)
-        }
-        if let observation = conversationDidEndObservation {
-            NotificationCenter.default.removeObserver(observation)
-        }
-    }
-}
-
-class Scene: BaseLevelScene {
-    
-    required init(levelName: String, tileMaps: SceneTileMaps) {
-
-        super.init(levelName: levelName, tileMaps: tileMaps)
-        
-        backgroundColor = .brown
-        addEntity(platformEntity(at: CGPoint(x: 512, y: 150)))
-        
-        let character = CharacterEntity(initialNodePosition: CGPoint(x: 200, y: 300))
-        addEntity(character)
-        
-        demo()
-    }
-    
-    enum DemoCategoryMask: UInt32, CategoryMask {
-        case enemy = 0xa
-        case npc = 0xb
-        case projectile = 0xc
-        case weapon = 0xd
-        case hazard = 0xe
-        case itemChest = 0xf
-        case chestItem = 0x10
-        case crate = 0x11
-        case triggerZone = 0x12
-        case collectible = 0x13
-    }
-
-    enum DemoLightMask: UInt32, LightMask {
-        case torch = 0x1
-    }
-
-    private func demo() {
-        // Initialize your entity in a suitable position of your collidable tile map
-        let myEntity = GlideEntity(initialNodePosition: TiledPoint(x: 10, y: 10).point(with: CGSize(width: 16, height: 16) /*scene.tileSize*/))
-                
-        // Give it a sprite and color it blue
-        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 24, height: 24))
-        // Don't forget to specify a z position for it, if you have a lot of nodes
-        spriteNodeComponent.zPositionContainer = DemoZPositionContainer.npcs
-        spriteNodeComponent.spriteNode.color = .blue
-        myEntity.addComponent(spriteNodeComponent)
-
-        // Make it an entity that can move
-        let kinematicsBodyComponent = KinematicsBodyComponent()
-        myEntity.addComponent(kinematicsBodyComponent)
-
-        // Make it an entity that can move horizontally
-        let horizontalMovementComponent = HorizontalMovementComponent(movementStyle: MovementStyle.fixedVelocity)
-        myEntity.addComponent(horizontalMovementComponent)
-
-        // Make it an entity that can move vertically
-        let verticalMovementComponent = VerticalMovementComponent(movementStyle: MovementStyle.fixedVelocity)
-        myEntity.addComponent(verticalMovementComponent)
-
-        // Make it a collidable entity
-        let colliderComponent = ColliderComponent(categoryMask: DemoCategoryMask.chestItem,
-                                                          size: CGSize(width: 24, height: 24),
-                                                          offset: .zero,
-                                                          leftHitPointsOffsets: (5, 5),
-                                                          rightHitPointsOffsets: (5, 5),
-                                                          topHitPointsOffsets: (5, 5),
-                                                          bottomHitPointsOffsets: (5, 5))
-                myEntity.addComponent(colliderComponent)
-
-        // Make it be able to collide with your collidable tile map
-        let colliderTileHolderComponent = ColliderTileHolderComponent()
-        myEntity.addComponent(colliderTileHolderComponent)
-
-        // Make it playable
-        // Use w,a,s,d on keyboard, or direction keys on 🎮 to play with it.
-        let playableCharacterComponent = PlayableCharacterComponent(playerIndex: 0)
-        myEntity.addComponent(playableCharacterComponent)
-
-        // Add it to the scene
-        addEntity(myEntity)
-    }
+    #endif // iOS
     
 }
-
-//
-//class Scene: GlideScene {
-//    
-//    override func setupScene() {
-//        shouldPauseWhenAppIsInBackground = false
-//        backgroundColor = .brown
-//        addEntity(platformEntity(at: CGPoint(x: 512, y: 150)))
-//        
-//        let character = CharacterEntity(initialNodePosition: CGPoint(x: 200, y: 300))
-//        addEntity(character)
-//        
-//        #if os(iOS)
-//        addEntity(moveLeftTouchButtonEntity)
-//        addEntity(moveRightTouchButtonEntity)
-//        addEntity(jumpTouchButtonEntity)
-//        #endif
-//    }
-//    
-//    override func layoutOnScreenItems() {
-//        #if os(iOS)
-//        layoutTouchControls()
-//        #endif
-//    }
-//    
-    func platformEntity(at position: CGPoint) -> GlideEntity {
-        let entity = GlideEntity(initialNodePosition: position)
-        
-        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 640, height: 64))
-        spriteNodeComponent.spriteNode.texture = SKTexture(imageNamed: "platform")
-        entity.addComponent(spriteNodeComponent)
-        
-        let colliderComponent = ColliderComponent(
-            categoryMask: GlideCategoryMask.none,
-            size: CGSize(width: 640, height: 64),
-            offset: .zero,
-            leftHitPointsOffsets: (10, 10),
-            rightHitPointsOffsets: (10, 10),
-            topHitPointsOffsets: (10, 10),
-            bottomHitPointsOffsets: (10, 10)
-        )
-        entity.addComponent(colliderComponent)
-        
-        let snappableComponent = SnappableComponent(providesOneWayCollision: false)
-        entity.addComponent(snappableComponent)
-        return entity
-    }
-//    
-//    #if os(iOS)
-//    let fontSize: CGFloat = 80
-//    lazy var moveLeftTouchButtonEntity: GlideEntity = {
-//        return touchButtonEntity(name: "Move Left", textureName: "button_left", inputName: "Player1_Horizontal", isNegative: true)
-//    }()
-//    
-//    lazy var moveRightTouchButtonEntity: GlideEntity = {
-//        return touchButtonEntity(name: "Move Right", textureName: "button_right", inputName: "Player1_Horizontal", isNegative: false)
-//    }()
-//    
-//    lazy var jumpTouchButtonEntity: GlideEntity = {
-//        return touchButtonEntity(name: "Jump", textureName: "button_up", inputName: "Player1_Jump", isNegative: false)
-//    }()
-//    
-//    func touchButtonEntity(name: String, textureName: String, inputName: String, isNegative: Bool) -> GlideEntity {
-//        let entity = GlideEntity(initialNodePosition: .zero)
-//        entity.name = name
-//        entity.transform.usesProposedPosition = false
-//        
-//        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 120, height: 100))
-//        spriteNodeComponent.spriteNode.texture = SKTexture(imageNamed: textureName)
-//        spriteNodeComponent.zPositionContainer = GlideZPositionContainer.camera
-//        entity.addComponent(spriteNodeComponent)
-//        
-//        let touchButtonComponent = TouchButtonComponent(spriteNode: spriteNodeComponent.spriteNode, input: .profiles([(name: inputName, isNegative: isNegative)]))
-//        entity.addComponent(touchButtonComponent)
-//        return entity
-//    }
-//    
-//    func layoutTouchControls() {
-//        var moveLeftNodeWidth: CGFloat = 0.0
-//        if let moveLeftNode = moveLeftTouchButtonEntity.component(ofType: SpriteNodeComponent.self)?.spriteNode {
-//            let margin: CGFloat = 30.0
-//            let nodePostionX = -size.width / 2 + moveLeftNode.size.width / 2 + margin
-//            let nodePostionY = -size.height / 2 + moveLeftNode.size.height / 2 + margin
-//            let nodePostion = CGPoint(x: nodePostionX, y: nodePostionY)
-//
-//            moveLeftTouchButtonEntity.transform.currentPosition = nodePostion
-//            moveLeftNodeWidth = moveLeftNode.size.width
-//        }
-//        
-//        if let moveRightNode = moveRightTouchButtonEntity.component(ofType: SpriteNodeComponent.self)?.spriteNode {
-//            let margin: CGFloat = 30.0
-//            let nodePostionX = -size.width / 2 + moveRightNode.size.width / 2 + margin + moveLeftNodeWidth
-//            let nodePostionY = -size.height / 2 + moveRightNode.size.height / 2 + margin
-//            let nodePostion = CGPoint(x: nodePostionX, y: nodePostionY)
-//
-//            moveRightTouchButtonEntity.transform.currentPosition = nodePostion
-//        }
-//        
-//        if let jumpNode = jumpTouchButtonEntity.component(ofType: SpriteNodeComponent.self)?.spriteNode {
-//            let margin: CGFloat = 30.0
-//            let nodePositionX = size.width / 2 - jumpNode.size.width / 2 - margin
-//            let nodePositionY = -size.height / 2 + jumpNode.size.height / 2 + margin
-//            let nodePosition = CGPoint(x: nodePositionX, y: nodePositionY)
-//            jumpTouchButtonEntity.transform.currentPosition = nodePosition
-//        }
-//    }
-//    #endif
-//}

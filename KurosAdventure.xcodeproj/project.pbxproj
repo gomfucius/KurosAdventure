@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4160A82B26117CB90066D9CC /* BaseLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4160A82A26117CB90066D9CC /* BaseLevelScene.swift */; };
+		4160A82C26117CB90066D9CC /* BaseLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4160A82A26117CB90066D9CC /* BaseLevelScene.swift */; };
+		4160A82D26117CB90066D9CC /* BaseLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4160A82A26117CB90066D9CC /* BaseLevelScene.swift */; };
 		417790CA260FA2A600642589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790C9260FA2A600642589 /* AppDelegate.swift */; };
 		417790CC260FA2A600642589 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790CB260FA2A600642589 /* SceneDelegate.swift */; };
 		417790D1260FA2A600642589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790CF260FA2A600642589 /* Main.storyboard */; };
@@ -46,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4157FE7626118A5500BFF262 /* Glide */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Glide; sourceTree = "<group>"; };
+		4160A82A26117CB90066D9CC /* BaseLevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLevelScene.swift; sourceTree = "<group>"; };
 		417790C6260FA2A600642589 /* KurosAdventure (iOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KurosAdventure (iOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		417790C9260FA2A600642589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417790CB260FA2A600642589 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,9 +107,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4160A83126117CD40066D9CC /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				4160A82A26117CB90066D9CC /* BaseLevelScene.swift */,
+				417791A4260FA5E000642589 /* Scene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		417790BD260FA2A600642589 = {
 			isa = PBXGroup;
 			children = (
+				4157FE7626118A5500BFF262 /* Glide */,
 				417790FF260FA2C800642589 /* Shared */,
 				417790FE260FA2BB00642589 /* macOS */,
 				417790FC260FA2B100642589 /* iOS */,
@@ -127,10 +142,10 @@
 		417790FC260FA2B100642589 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				417790D7260FA2A700642589 /* Info.plist */,
-				417790CF260FA2A600642589 /* Main.storyboard */,
-				417790D4260FA2A700642589 /* LaunchScreen.storyboard */,
 				417790C9260FA2A600642589 /* AppDelegate.swift */,
+				417790D7260FA2A700642589 /* Info.plist */,
+				417790D4260FA2A700642589 /* LaunchScreen.storyboard */,
+				417790CF260FA2A600642589 /* Main.storyboard */,
 				417790CB260FA2A600642589 /* SceneDelegate.swift */,
 			);
 			path = iOS;
@@ -154,7 +169,7 @@
 				417791C6260FA9D300642589 /* CharacterEntity.swift */,
 				417792AE26101A6900642589 /* Entities */,
 				4177919D260FA56F00642589 /* GameViewController.swift */,
-				417791A4260FA5E000642589 /* Scene.swift */,
+				4160A83126117CD40066D9CC /* Scene */,
 				417790D2260FA2A700642589 /* SharedAssets.xcassets */,
 				41779245260FDCD800642589 /* Tiles */,
 				417791E1260FB93300642589 /* TouchButtonComponent.swift */,
@@ -371,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4160A82B26117CB90066D9CC /* BaseLevelScene.swift in Sources */,
 				417791C7260FA9D300642589 /* CharacterEntity.swift in Sources */,
 				417791EB260FC98600642589 /* TouchButtonComponent.swift in Sources */,
 				4177919E260FA56F00642589 /* GameViewController.swift in Sources */,
@@ -387,6 +403,7 @@
 			files = (
 				417791A6260FA5E000642589 /* Scene.swift in Sources */,
 				417792B126101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */,
+				4160A82C26117CB90066D9CC /* BaseLevelScene.swift in Sources */,
 				4177919F260FA56F00642589 /* GameViewController.swift in Sources */,
 				417791C8260FA9D300642589 /* CharacterEntity.swift in Sources */,
 				41779107260FA2FD00642589 /* AppDelegate.swift in Sources */,
@@ -399,6 +416,7 @@
 			files = (
 				417791A7260FA5E000642589 /* Scene.swift in Sources */,
 				417792B226101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */,
+				4160A82D26117CB90066D9CC /* BaseLevelScene.swift in Sources */,
 				417791A0260FA56F00642589 /* GameViewController.swift in Sources */,
 				417791C9260FA9D300642589 /* CharacterEntity.swift in Sources */,
 				41779167260FA38F00642589 /* AppDelegate.swift in Sources */,

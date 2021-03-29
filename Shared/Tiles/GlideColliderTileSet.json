@@ -14,126 +14,126 @@
  "tiles":[
         {
          "id":0,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/ground.imageset\/ground.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/ground.imageset\/ground.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"ground"
         }, 
         {
          "id":1,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/jump_wall_left.imageset\/jump_wall_left.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/jump_wall_left.imageset\/jump_wall_left.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"jump_wall_left"
         }, 
         {
          "id":2,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/jump_wall_right.imageset\/jump_wall_right.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/jump_wall_right.imageset\/jump_wall_right.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"jump_wall_right"
         }, 
         {
          "id":3,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/oneway.imageset\/oneway.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/oneway.imageset\/oneway.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"one_way"
         }, 
         {
          "id":13,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_0_3.imageset\/slope_0_3.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_0_3.imageset\/slope_0_3.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_0_3"
         }, 
         {
          "id":14,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_4_7.imageset\/slope_4_7.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_4_7.imageset\/slope_4_7.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_4_7"
         }, 
         {
          "id":15,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_8_11.imageset\/slope_8_11.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_8_11.imageset\/slope_8_11.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_8_11"
         }, 
         {
          "id":16,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_12_15.imageset\/slope_12_15.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_12_15.imageset\/slope_12_15.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_12_15"
         }, 
         {
          "id":17,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_0_7.imageset\/slope_0_7.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_0_7.imageset\/slope_0_7.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_0_7"
         }, 
         {
          "id":18,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_8_15.imageset\/slope_8_15.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_8_15.imageset\/slope_8_15.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_8_15"
         }, 
         {
          "id":19,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_0_15.imageset\/slope_0_15.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_0_15.imageset\/slope_0_15.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_0_15"
         }, 
         {
          "id":20,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_15_0.imageset\/slope_15_0.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_15_0.imageset\/slope_15_0.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_15_0"
         }, 
         {
          "id":21,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_15_12.imageset\/slope_15_12.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_15_12.imageset\/slope_15_12.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_15_12"
         }, 
         {
          "id":22,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_11_8.imageset\/slope_11_8.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_11_8.imageset\/slope_11_8.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_11_8"
         }, 
         {
          "id":23,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_7_4.imageset\/slope_7_4.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_7_4.imageset\/slope_7_4.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_7_4"
         }, 
         {
          "id":24,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_3_0.imageset\/slope_3_0.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_3_0.imageset\/slope_3_0.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_3_0"
         }, 
         {
          "id":25,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_15_8.imageset\/slope_15_8.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_15_8.imageset\/slope_15_8.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_15_8"
         }, 
         {
          "id":26,
-         "image":"..\/SharedAssets.xcassets\/Decoration Tiles\/slope_7_0.imageset\/slope_7_0.png",
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/slope_7_0.imageset\/slope_7_0.png",
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_7_0"

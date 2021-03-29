@@ -11,31 +11,41 @@ import GameplayKit
 final class CharacterEntity: GlideEntity {
     
     override func setup() {
-        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 120, height: 165))
-        spriteNodeComponent.spriteNode.texture = SKTexture(imageNamed: "character_walk_0")
-        addComponent(spriteNodeComponent) 
+//        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 16, height: 16))
+//        spriteNodeComponent.spriteNode.texture = SKTexture(imageNamed: "character_walk_0")
+//        addComponent(spriteNodeComponent)
+        
+        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 24, height: 24))
+        // Don't forget to specify a z position for it, if you have a lot of nodes
+        spriteNodeComponent.zPositionContainer = DemoZPositionContainer.player
+        spriteNodeComponent.spriteNode.color = .blue
+        addComponent(spriteNodeComponent)
         
         var kinematicsBodyConfiguration = KinematicsBodyComponent.sharedConfiguration
         kinematicsBodyConfiguration.maximumVerticalVelocity = 20
         let kinematicsBodyComponent = KinematicsBodyComponent(configuration: kinematicsBodyConfiguration)
         addComponent(kinematicsBodyComponent)
         
+        // Make it a collidable entity
         let colliderComponent = ColliderComponent(
             categoryMask: GlideCategoryMask.none,
-            size: CGSize(width: 100, height: 135),
+            size: CGSize(width: 24, height: 24),
             offset: .zero,
-            leftHitPointsOffsets: (10, 10),
-            rightHitPointsOffsets: (10, 10),
-            topHitPointsOffsets: (10, 10),
-            bottomHitPointsOffsets: (10, 10)
-        )
+            leftHitPointsOffsets: (5, 5),
+            rightHitPointsOffsets: (5, 5),
+            topHitPointsOffsets: (5, 5),
+            bottomHitPointsOffsets: (5, 5))
         addComponent(colliderComponent)
+
+        // Make it be able to collide with your collidable tile map
+        let colliderTileHolderComponent = ColliderTileHolderComponent()
+        addComponent(colliderTileHolderComponent)
         
         let snapperComponent = SnapperComponent()
         addComponent(snapperComponent)
         
         var config = HorizontalMovementComponent.sharedConfiguration
-        config.fixedVelocity = 30
+        config.fixedVelocity = 15
         
         let horizontalMovementComponent = HorizontalMovementComponent(movementStyle: .fixedVelocity, configuration: config)
         addComponent(horizontalMovementComponent)
@@ -43,7 +53,7 @@ final class CharacterEntity: GlideEntity {
         let playableCharacterComponent = PlayableCharacterComponent(playerIndex: 0)
         addComponent(playableCharacterComponent)
         
-        setupTextureAnimation()
+//        setupTextureAnimation()
         let characterComponent = CharacterComponent()
         addComponent(characterComponent)
         

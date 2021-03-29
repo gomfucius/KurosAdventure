@@ -44,7 +44,6 @@ final class GameViewController: ViewControllerType {
     }
     
     private func loadTiledMapEditor() {
-        //        let scene = Scene(collisionTileMapNode: nil, zPositionContainers: [])
         let decorationTilesAtlas = SKTextureAtlas(named: "Decoration Tiles")
 
         let loader = TiledMapEditorSceneLoader(fileName: "TestMap",
