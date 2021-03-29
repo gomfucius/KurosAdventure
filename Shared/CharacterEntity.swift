@@ -50,7 +50,7 @@ final class CharacterEntity: GlideEntity {
         let playableCharacterComponent = PlayableCharacterComponent(playerIndex: 0)
         addComponent(playableCharacterComponent)
         
-//        setupTextureAnimation()
+        setupTextureAnimation()
         let characterComponent = CharacterComponent()
         addComponent(characterComponent)
         
@@ -70,16 +70,15 @@ final class CharacterEntity: GlideEntity {
     }
     
     private func setupTextureAnimation() {
-        let timePerFrame: TimeInterval = 0.15
-        let animationSize = CGSize(width: 120, height: 165)
+        let animationSize = CGSize(width: 64, height: 64)
         let animationOffset = CGPoint(x: 0, y: 15)
         
-        let idleAction = TextureAnimation.Action(textureFormat: "character_walk_%d", numberOfFrames: 1, timePerFrame: timePerFrame)
+        let idleAction = TextureAnimation.Action(textureFormat: "character_walk_%d", numberOfFrames: 4, timePerFrame: 0.45)
         let idleAnimation = TextureAnimation(triggerName: "Idle", offset: animationOffset, size: animationSize, action: idleAction, loops: true)
         let animatorComponent = TextureAnimatorComponent(entryAnimation: idleAnimation)
         addComponent(animatorComponent)
         
-        let walkAction = TextureAnimation.Action(textureFormat: "character_walk_%d", numberOfFrames: 3, timePerFrame: timePerFrame)
+        let walkAction = TextureAnimation.Action(textureFormat: "character_walk_%d", numberOfFrames: 4, timePerFrame: 0.15)
         let walkAnimation = TextureAnimation(triggerName: "Walk", offset: animationOffset, size: animationSize, action: walkAction, loops: true)
         animatorComponent.addAnimation(walkAnimation)
     }
