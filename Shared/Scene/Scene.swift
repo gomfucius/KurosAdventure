@@ -19,10 +19,8 @@ class Scene: BaseLevelScene {
         backgroundColor = .brown
 //        addEntity(platformEntity(at: CGPoint(x: 512, y: 150)))
 //
-        let character = CharacterEntity(initialNodePosition: TiledPoint(x: 50, y: 50).point(with: tileSize))
+        let character = CharacterEntity(initialNodePosition: defaultPlayerStartLocation)
         addEntity(character)
-        
-//        demo()
     }
     
     enum DemoCategoryMask: UInt32, CategoryMask {
@@ -42,52 +40,6 @@ class Scene: BaseLevelScene {
         case torch = 0x1
     }
 
-    private func demo() {
-        // Initialize your entity in a suitable position of your collidable tile map
-        let myEntity = GlideEntity(initialNodePosition: TiledPoint(x: 50, y: 50).point(with: tileSize))
-
-        // Give it a sprite and color it blue
-        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 24, height: 24))
-        // Don't forget to specify a z position for it, if you have a lot of nodes
-        spriteNodeComponent.zPositionContainer = DemoZPositionContainer.player
-        spriteNodeComponent.spriteNode.color = .blue
-        myEntity.addComponent(spriteNodeComponent)
-
-        // Make it an entity that can move
-        let kinematicsBodyComponent = KinematicsBodyComponent()
-        myEntity.addComponent(kinematicsBodyComponent)
-
-        // Make it an entity that can move horizontally
-        let horizontalMovementComponent = HorizontalMovementComponent(movementStyle: MovementStyle.fixedVelocity)
-        myEntity.addComponent(horizontalMovementComponent)
-
-        // Make it an entity that can move vertically
-        let verticalMovementComponent = VerticalMovementComponent(movementStyle: MovementStyle.fixedVelocity)
-        myEntity.addComponent(verticalMovementComponent)
-
-        // Make it a collidable entity
-        let colliderComponent = ColliderComponent(categoryMask: DemoCategoryMask.chestItem,
-                                                  size: CGSize(width: 24, height: 24),
-                                                  offset: .zero,
-                                                  leftHitPointsOffsets: (5, 5),
-                                                  rightHitPointsOffsets: (5, 5),
-                                                  topHitPointsOffsets: (5, 5),
-                                                  bottomHitPointsOffsets: (5, 5))
-        myEntity.addComponent(colliderComponent)
-
-        // Make it be able to collide with your collidable tile map
-        let colliderTileHolderComponent = ColliderTileHolderComponent()
-        myEntity.addComponent(colliderTileHolderComponent)
-
-        // Make it playable
-        // Use w,a,s,d on keyboard, or direction keys on 🎮 to play with it.
-        let playableCharacterComponent = PlayableCharacterComponent(playerIndex: 0)
-        myEntity.addComponent(playableCharacterComponent)
-
-        // Add it to the scene
-        addEntity(myEntity)
-    }
-    
     private func platformEntity(at position: CGPoint) -> GlideEntity {
         let entity = GlideEntity(initialNodePosition: position)
         

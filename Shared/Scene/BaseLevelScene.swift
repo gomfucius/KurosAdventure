@@ -27,7 +27,7 @@ class BaseLevelScene: GlideScene {
     
     let tileMaps: SceneTileMaps
     var defaultPlayerStartLocation: CGPoint {
-        return TiledPoint(10, 10).point(with: tileSize)
+        return TiledPoint(20, 20).point(with: tileSize)
     }
     
     lazy var parallaxBackgroundEntity: ParallaxBackgroundEntity = {

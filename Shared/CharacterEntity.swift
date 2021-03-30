@@ -29,7 +29,7 @@ final class CharacterEntity: GlideEntity {
         let kinematicsBodyComponent = KinematicsBodyComponent(configuration: kinematicsBodyConfiguration)
         addComponent(kinematicsBodyComponent)
         
-        // Make it a collidable entity
+        // Make the player character a collidable entity
         let colliderComponent = ColliderComponent(
             categoryMask: GlideCategoryMask.none,
             size: CGSize(width: 24, height: 24),
