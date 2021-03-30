@@ -17,11 +17,14 @@ class Scene: BaseLevelScene {
         
         shouldPauseWhenAppIsInBackground = false
         backgroundColor = .brown
-        //        addEntity(platformEntity(at: CGPoint(x: 512, y: 150)))
-        //
+        
+        mapContact(between: GlideCategoryMask.player, and: KuroCategoryMask.npc)
+
         let character = CharacterEntity(initialNodePosition: defaultPlayerStartLocation)
         addEntity(character)
-        addEntity(patrollingWithWallContactNPC)
+        addEntity(patrollingWithWallContactNPC(initialNodePosition: TiledPoint(30, 25).point(with: tileSize)))
+        addEntity(patrollingWithGapContactNPC(initialNodePosition: TiledPoint(30, 25).point(with: tileSize)))
+        addEntity(patrollingWithGapContactNPC(initialNodePosition: TiledPoint(32, 45).point(with: tileSize)))
     }
     
     private func platformEntity(at position: CGPoint) -> GlideEntity {
@@ -47,7 +50,7 @@ class Scene: BaseLevelScene {
         return entity
     }
     
-    private lazy var patrollingWithWallContactNPC: GlideEntity = {
+    private func patrollingWithWallContactNPC(initialNodePosition: CGPoint) -> GlideEntity {
         let npc = FoxEntity(initialNodePosition: TiledPoint(20, 10).point(with: tileSize))
         
         let selfChangeDirectionComponent = SelfChangeDirectionComponent()
@@ -59,7 +62,21 @@ class Scene: BaseLevelScene {
         npc.addComponent(selfChangeDirectionComponent)
         
         return npc
-    }()
+    }
+    
+    private func patrollingWithGapContactNPC(initialNodePosition: CGPoint) -> GlideEntity {
+        let npc = ImpEntity(initialNodePosition: initialNodePosition)
+        
+        let selfChangeDirectionComponent = SelfChangeDirectionComponent()
+        let profile = SelfChangeDirectionComponent.Profile(condition: .gapContact,
+                                                           axes: .horizontal,
+                                                           delay: 0.0,
+                                                           shouldKinematicsBodyStopOnDirectionChange: true)
+        selfChangeDirectionComponent.profiles.append(profile)
+        npc.addComponent(selfChangeDirectionComponent)
+        
+        return npc
+    }
 }
 
 //

@@ -67,6 +67,13 @@ final class CharacterEntity: GlideEntity {
         jumpConfiguration.isCornerJumpsEnabled = true
         let jumpComponent = JumpComponent(configuration: jumpConfiguration)
         addComponent(jumpComponent)
+        
+        let bumpAttackerComponent = BumpAttackerComponent()
+        addComponent(bumpAttackerComponent)
+        
+        BouncerComponent.sharedConfiguration.verticalBouncingVelocity = 16
+        let bouncerComponent = BouncerComponent(contactCategoryMasks: nil)
+        addComponent(bouncerComponent)
     }
     
     private func setupTextureAnimation() {
