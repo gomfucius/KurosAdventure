@@ -12,34 +12,18 @@ import GameplayKit
 class Scene: BaseLevelScene {
     
     required init(levelName: String, tileMaps: SceneTileMaps) {
-
+        
         super.init(levelName: levelName, tileMaps: tileMaps)
-
+        
         shouldPauseWhenAppIsInBackground = false
         backgroundColor = .brown
-//        addEntity(platformEntity(at: CGPoint(x: 512, y: 150)))
-//
+        //        addEntity(platformEntity(at: CGPoint(x: 512, y: 150)))
+        //
         let character = CharacterEntity(initialNodePosition: defaultPlayerStartLocation)
         addEntity(character)
+        addEntity(patrollingWithWallContactNPC)
     }
     
-    enum DemoCategoryMask: UInt32, CategoryMask {
-        case enemy = 0xa
-        case npc = 0xb
-        case projectile = 0xc
-        case weapon = 0xd
-        case hazard = 0xe
-        case itemChest = 0xf
-        case chestItem = 0x10
-        case crate = 0x11
-        case triggerZone = 0x12
-        case collectible = 0x13
-    }
-
-    enum DemoLightMask: UInt32, LightMask {
-        case torch = 0x1
-    }
-
     private func platformEntity(at position: CGPoint) -> GlideEntity {
         let entity = GlideEntity(initialNodePosition: position)
         
@@ -62,6 +46,20 @@ class Scene: BaseLevelScene {
         entity.addComponent(snappableComponent)
         return entity
     }
+    
+    private lazy var patrollingWithWallContactNPC: GlideEntity = {
+        let npc = FoxEntity(initialNodePosition: TiledPoint(20, 10).point(with: tileSize))
+        
+        let selfChangeDirectionComponent = SelfChangeDirectionComponent()
+        let profile = SelfChangeDirectionComponent.Profile(condition: .wallContact,
+                                                           axes: .horizontal,
+                                                           delay: 0.3,
+                                                           shouldKinematicsBodyStopOnDirectionChange: false)
+        selfChangeDirectionComponent.profiles.append(profile)
+        npc.addComponent(selfChangeDirectionComponent)
+        
+        return npc
+    }()
 }
 
 //

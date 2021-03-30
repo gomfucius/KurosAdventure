@@ -31,7 +31,7 @@ final class CharacterEntity: GlideEntity {
         
         // Make the player character a collidable entity
         let colliderComponent = ColliderComponent(
-            categoryMask: GlideCategoryMask.none,
+            categoryMask: GlideCategoryMask.player,
             size: CGSize(width: 24, height: 24),
             offset: .zero,
             leftHitPointsOffsets: (5, 5),
