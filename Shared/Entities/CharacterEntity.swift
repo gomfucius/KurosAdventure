@@ -71,8 +71,10 @@ final class CharacterEntity: GlideEntity {
         let bumpAttackerComponent = BumpAttackerComponent()
         addComponent(bumpAttackerComponent)
         
-        BouncerComponent.sharedConfiguration.verticalBouncingVelocity = 16
-        let bouncerComponent = BouncerComponent(contactCategoryMasks: nil)
+        var bouncerConfiguration = BouncerComponent.sharedConfiguration
+        bouncerConfiguration.verticalBouncingVelocity = 16
+        bouncerConfiguration.restTimeBetweenBounces = 0.0 // Make it bounceable right away so we can jump on one enemy to another
+        let bouncerComponent = BouncerComponent(contactCategoryMasks: nil, configuration: bouncerConfiguration)
         addComponent(bouncerComponent)
     }
     

@@ -8,7 +8,7 @@
  "margin":0,
  "name":"CollisionGround",
  "spacing":0,
- "tilecount":18,
+ "tilecount":19,
  "tiledversion":"1.5.0",
  "tileheight":16,
  "tiles":[
@@ -137,6 +137,12 @@
          "imageheight":16,
          "imagewidth":16,
          "type":"slope_7_0"
+        }, 
+        {
+         "id":27,
+         "image":"..\/SharedAssets.xcassets\/Decoration Tiles.spriteatlas\/empty.imageset\/empty.png",
+         "imageheight":16,
+         "imagewidth":16
         }],
  "tilewidth":16,
  "type":"tileset",
@@ -145,140 +151,34 @@
         {
          "colors":[
                 {
-                 "color":"#ff0000",
-                 "name":"",
+                 "color":"#0e7a46",
+                 "name":"Grass",
                  "probability":1,
-                 "tile":14
-                }, 
-                {
-                 "color":"#00ff00",
-                 "name":"",
-                 "probability":1,
-                 "tile":15
-                }, 
-                {
-                 "color":"#0000ff",
-                 "name":"",
-                 "probability":1,
-                 "tile":16
-                }, 
-                {
-                 "color":"#ff7700",
-                 "name":"",
-                 "probability":1,
-                 "tile":17
-                }, 
-                {
-                 "color":"#00e9ff",
-                 "name":"",
-                 "probability":1,
-                 "tile":18
-                }, 
-                {
-                 "color":"#ff00d8",
-                 "name":"",
-                 "probability":1,
-                 "tile":19
-                }, 
-                {
-                 "color":"#ffff00",
-                 "name":"",
-                 "probability":1,
-                 "tile":20
-                }, 
-                {
-                 "color":"#a000ff",
-                 "name":"",
-                 "probability":1,
-                 "tile":21
-                }, 
-                {
-                 "color":"#00ffa1",
-                 "name":"",
-                 "probability":1,
-                 "tile":22
-                }, 
-                {
-                 "color":"#ffa8a8",
-                 "name":"",
-                 "probability":1,
-                 "tile":22
-                }, 
-                {
-                 "color":"#b4a8ff",
-                 "name":"",
-                 "probability":1,
-                 "tile":23
-                }, 
-                {
-                 "color":"#96ffa7",
-                 "name":"",
-                 "probability":1,
-                 "tile":24
-                }, 
-                {
-                 "color":"#8e7848",
-                 "name":"",
-                 "probability":1,
-                 "tile":25
-                }, 
-                {
-                 "color":"#5a5a5a",
-                 "name":"",
-                 "probability":1,
-                 "tile":26
+                 "tile":13
                 }],
          "name":"TerrainDayo",
          "tile":13,
          "type":"edge",
          "wangtiles":[
                 {
+                 "tileid":3,
+                 "wangid":[1, 0, 1, 0, 1, 0, 1, 0]
+                }, 
+                {
+                 "tileid":13,
+                 "wangid":[1, 0, 1, 0, 0, 0, 1, 0]
+                }, 
+                {
                  "tileid":14,
-                 "wangid":[1, 0, 0, 0, 0, 0, 0, 0]
+                 "wangid":[0, 0, 1, 0, 0, 0, 1, 0]
                 }, 
                 {
                  "tileid":15,
-                 "wangid":[2, 0, 0, 0, 0, 0, 0, 0]
+                 "wangid":[0, 0, 1, 0, 0, 0, 1, 0]
                 }, 
                 {
                  "tileid":16,
-                 "wangid":[3, 0, 0, 0, 0, 0, 0, 0]
-                }, 
-                {
-                 "tileid":17,
-                 "wangid":[0, 0, 4, 0, 0, 0, 0, 0]
-                }, 
-                {
-                 "tileid":18,
-                 "wangid":[5, 0, 0, 0, 0, 0, 0, 0]
-                }, 
-                {
-                 "tileid":19,
-                 "wangid":[0, 0, 6, 0, 0, 0, 0, 0]
-                }, 
-                {
-                 "tileid":20,
-                 "wangid":[7, 0, 0, 0, 0, 0, 0, 0]
-                }, 
-                {
-                 "tileid":22,
-                 "wangid":[0, 0, 0, 0, 10, 0, 0, 0]
-                }, 
-                {
-                 "tileid":23,
-                 "wangid":[0, 0, 11, 0, 0, 0, 0, 0]
-                }, 
-                {
-                 "tileid":24,
-                 "wangid":[12, 0, 0, 0, 0, 0, 0, 0]
-                }, 
-                {
-                 "tileid":25,
-                 "wangid":[0, 0, 13, 0, 0, 0, 0, 0]
-                }, 
-                {
-                 "tileid":26,
-                 "wangid":[14, 0, 0, 0, 0, 0, 0, 0]
+                 "wangid":[0, 0, 1, 0, 0, 0, 1, 0]
                 }]
         }]
 }
