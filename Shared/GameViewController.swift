@@ -16,6 +16,15 @@ final class GameViewController: ViewControllerType {
         loadTiledMapEditor()
     }
     
+    override func loadView() {
+        super.loadView()
+        
+        self.view = SKView()
+        #if os(iOS)
+        self.view.isMultipleTouchEnabled = true
+        #endif
+    }
+    
     private func loadSKS() {
         // Load a SKScene with your scene file.
         let sks = SKScene(fileNamed: "MyScene")
