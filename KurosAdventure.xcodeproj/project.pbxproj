@@ -112,6 +112,9 @@
 		4191614B26137FFE00680146 /* BumpAttackerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191614A26137FFE00680146 /* BumpAttackerComponent.swift */; };
 		4191614C26137FFE00680146 /* BumpAttackerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191614A26137FFE00680146 /* BumpAttackerComponent.swift */; };
 		4191614D26137FFE00680146 /* BumpAttackerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191614A26137FFE00680146 /* BumpAttackerComponent.swift */; };
+		41AF863226158CCA00D0F1FA /* HazardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF863126158CCA00D0F1FA /* HazardComponent.swift */; };
+		41AF863326158CCA00D0F1FA /* HazardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF863126158CCA00D0F1FA /* HazardComponent.swift */; };
+		41AF863426158CCA00D0F1FA /* HazardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF863126158CCA00D0F1FA /* HazardComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +168,7 @@
 		41916137261374DB00680146 /* KuroCategoryMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuroCategoryMask.swift; sourceTree = "<group>"; };
 		41916141261379E400680146 /* ImpEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpEntity.swift; sourceTree = "<group>"; };
 		4191614A26137FFE00680146 /* BumpAttackerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumpAttackerComponent.swift; sourceTree = "<group>"; };
+		41AF863126158CCA00D0F1FA /* HazardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazardComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				4191614926137FEA00680146 /* Player */,
+				41AF863126158CCA00D0F1FA /* HazardComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 				411D22962614C40F00B4109B /* BackButtonContentView.swift in Sources */,
 				41916138261374DB00680146 /* KuroCategoryMask.swift in Sources */,
 				4191612E261372F800680146 /* FoxEntity.swift in Sources */,
+				41AF863226158CCA00D0F1FA /* HazardComponent.swift in Sources */,
 				411D22C42614C52700B4109B /* SingleLevelSectionViewModel.swift in Sources */,
 				4160A82B26117CB90066D9CC /* BaseLevelScene.swift in Sources */,
 				411D22AE2614C47600B4109B /* Label+StyledLabels.swift in Sources */,
@@ -597,6 +603,7 @@
 				411D22BF2614C52700B4109B /* LevelSectionsViewModel.swift in Sources */,
 				411D22A32614C40F00B4109B /* PageIndicatorView.swift in Sources */,
 				411D229D2614C40F00B4109B /* NavigationFocusAnimationView.swift in Sources */,
+				41AF863326158CCA00D0F1FA /* HazardComponent.swift in Sources */,
 				41916143261379E400680146 /* ImpEntity.swift in Sources */,
 				411D22C52614C52700B4109B /* SingleLevelSectionViewModel.swift in Sources */,
 				411D22B22614C47600B4109B /* CAAnimation+BackgroundColorAnimation.swift in Sources */,
@@ -631,6 +638,7 @@
 				411D22C02614C52700B4109B /* LevelSectionsViewModel.swift in Sources */,
 				411D22A42614C40F00B4109B /* PageIndicatorView.swift in Sources */,
 				411D229E2614C40F00B4109B /* NavigationFocusAnimationView.swift in Sources */,
+				41AF863426158CCA00D0F1FA /* HazardComponent.swift in Sources */,
 				41916144261379E400680146 /* ImpEntity.swift in Sources */,
 				411D22C62614C52700B4109B /* SingleLevelSectionViewModel.swift in Sources */,
 				411D22B32614C47600B4109B /* CAAnimation+BackgroundColorAnimation.swift in Sources */,

@@ -74,8 +74,11 @@ final class CharacterEntity: GlideEntity {
         var bouncerConfiguration = BouncerComponent.sharedConfiguration
         bouncerConfiguration.verticalBouncingVelocity = 16
         bouncerConfiguration.restTimeBetweenBounces = 0.0 // Make it bounceable right away so we can jump on one enemy to another
-        let bouncerComponent = BouncerComponent(contactCategoryMasks: nil, configuration: bouncerConfiguration)
+        let bouncerComponent = BouncerComponent(contactCategoryMasks: KuroCategoryMask.npc, configuration: bouncerConfiguration)
         addComponent(bouncerComponent)
+        
+        let healthComponent = HealthComponent(maximumHealth: 1)
+        addComponent(healthComponent)
     }
     
     private func setupTextureAnimation() {
@@ -105,5 +108,35 @@ final class CharacterComponent: GKComponent, GlideComponent {
         } else {
             textureAnimatorComponent?.enableAnimation(with: "Idle")
         }
+    }
+    
+    func didSkipUpdate() {
+        let isDead = entity?.component(ofType: HealthComponent.self)?.isDead
+        let isColliderAlive = entity?.component(ofType: ColliderComponent.self)?.shouldEntityBeUpdated
+        if didPlayDieAnimation == false && (isDead == true || isColliderAlive == false) {
+            didPlayDieAnimation = true
+            entity?.component(ofType: SpriteNodeComponent.self)?.node.removeAllActions()
+            entity?.component(ofType: SpriteNodeComponent.self)?.node.run(dieAction, completion: { [weak self] in
+                self?.hasDieAnimationFinished = true
+            })
+        }
+    }
+    
+    // MARK: - Private
+    
+    private var hasDieAnimationFinished: Bool = false
+    private var didPlayDieAnimation: Bool = false
+    private let dieAction = SKAction.textureAnimation(textureFormat: "character_die_%d",
+                                              numberOfFrames: 7,
+                                              timePerFrame: 0.2,
+                                              loops: false,
+                                              isReverse: false,
+                                              textureAtlas: nil,
+                                              shouldGenerateNormalMaps: true)
+}
+
+extension CharacterComponent: RemovalControllingComponent {
+    public var canEntityBeRemoved: Bool {
+        return hasDieAnimationFinished
     }
 }

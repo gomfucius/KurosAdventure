@@ -52,6 +52,7 @@ class ImpEntity: GlideEntity {
         
         addComponent(ImpComponent())
         addComponent(HealthComponent(maximumHealth: 1.0))
+        addComponent(HazardComponent())
         
         setupTextureAnimations()
     }
