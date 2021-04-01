@@ -27,7 +27,7 @@ class BaseLevelScene: GlideScene {
     
     let tileMaps: SceneTileMaps
     var defaultPlayerStartLocation: CGPoint {
-        return TiledPoint(20, 20).point(with: tileSize)
+        return TiledPoint(20, 60).point(with: tileSize)
     }
     
     lazy var parallaxBackgroundEntity: ParallaxBackgroundEntity = {
@@ -196,7 +196,7 @@ class BaseLevelScene: GlideScene {
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 44, height: 44),
                                                         triggersOnTouchUpInside: false,
                                                         input: .callback({ [weak self] in
-                                                            self?.isPaused.toggle()
+                                                            self?.isPaused = true
                                                         }))
         touchButtonComponent.zPositionContainer = GlideZPositionContainer.camera
         touchButtonComponent.normalTexture = SKTexture(nearestFilteredImageName: "touchbutton_pause")
