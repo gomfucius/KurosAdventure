@@ -688,7 +688,7 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="1024" height="768"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1792" height="1095"/>
                         <value key="minSize" type="size" width="1024" height="768"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -702,18 +702,32 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Game View Controller-->
+        <!--Container View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="GameViewController" customModule="KurosAdventure__macOS_" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl" customClass="SKView">
+                <viewController id="XfG-lQ-9wD" customClass="ContainerViewController" customModule="KurosAdventure__macOS_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="mAv-oS-rZ5" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mAv-oS-rZ5" secondAttribute="bottom" id="Pn3-Fj-8iF"/>
+                            <constraint firstItem="mAv-oS-rZ5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="caF-tR-UGy"/>
+                            <constraint firstItem="mAv-oS-rZ5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="ey7-pN-UmY"/>
+                            <constraint firstAttribute="trailing" secondItem="mAv-oS-rZ5" secondAttribute="trailing" id="uVd-wW-P1v"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="mAv-oS-rZ5" id="pQD-s1-c4z"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="848"/>
+            <point key="canvasLocation" x="75" y="1159"/>
         </scene>
     </scenes>
 </document>

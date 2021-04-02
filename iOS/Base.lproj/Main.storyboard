@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,20 +8,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Container View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="KurosAdventure__iOS_" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="BYZ-38-t0r" customClass="ContainerViewController" customModule="KurosAdventure__iOS_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mT5-kz-sH1">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mT5-kz-sH1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C8g-9R-75b"/>
+                            <constraint firstItem="mT5-kz-sH1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="a4n-f6-IUn"/>
+                            <constraint firstItem="mT5-kz-sH1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bOx-e4-NtH"/>
+                            <constraint firstItem="mT5-kz-sH1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="rYi-W8-PJw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="mT5-kz-sH1" id="I9h-ai-iPa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="115"/>
+            <point key="canvasLocation" x="-94.002998500749626" y="213.59999999999999"/>
         </scene>
     </scenes>
     <resources>

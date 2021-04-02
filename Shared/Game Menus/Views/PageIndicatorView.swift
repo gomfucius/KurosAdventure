@@ -67,11 +67,11 @@ class PageIndicatorView: View {
     
     let direction: Direction
     
-    let images = [Image(imageLiteralResourceName: "arrow_up"), Image(imageLiteralResourceName: "arrow_up_small")]
+    let images = [Image(imageLiteralResourceName: "button_up"), Image(imageLiteralResourceName: "button_up")]
     #if os(OSX)
     lazy var imageLayer: CALayer = {
         let layer = CALayer()
-        let layerImage = Image(imageLiteralResourceName: "arrow_up")
+        let layerImage = Image(imageLiteralResourceName: "button_up")
         layer.frame = CGRect(x: 0, y: 0, width: layerImage.size.width, height: layerImage.size.height)
         return layer
     }()

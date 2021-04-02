@@ -65,7 +65,6 @@
 		4160A82C26117CB90066D9CC /* BaseLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4160A82A26117CB90066D9CC /* BaseLevelScene.swift */; };
 		4160A82D26117CB90066D9CC /* BaseLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4160A82A26117CB90066D9CC /* BaseLevelScene.swift */; };
 		417790CA260FA2A600642589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790C9260FA2A600642589 /* AppDelegate.swift */; };
-		417790CC260FA2A600642589 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417790CB260FA2A600642589 /* SceneDelegate.swift */; };
 		417790D1260FA2A600642589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790CF260FA2A600642589 /* Main.storyboard */; };
 		417790D3260FA2A700642589 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417790D2260FA2A700642589 /* SharedAssets.xcassets */; };
 		417790D6260FA2A700642589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417790D4260FA2A700642589 /* LaunchScreen.storyboard */; };
@@ -109,6 +108,12 @@
 		418B34AD2616C5D70057847F /* UpdateHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34AC2616C5D70057847F /* UpdateHealthBarComponent.swift */; };
 		418B34AE2616C5D70057847F /* UpdateHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34AC2616C5D70057847F /* UpdateHealthBarComponent.swift */; };
 		418B34AF2616C5D70057847F /* UpdateHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34AC2616C5D70057847F /* UpdateHealthBarComponent.swift */; };
+		418B34C4261761680057847F /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34C3261761680057847F /* TitleViewController.swift */; };
+		418B34C5261761680057847F /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34C3261761680057847F /* TitleViewController.swift */; };
+		418B34C6261761680057847F /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34C3261761680057847F /* TitleViewController.swift */; };
+		418B34CB2617624B0057847F /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34CA2617624B0057847F /* ContainerViewController.swift */; };
+		418B34CD2617624C0057847F /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34CA2617624B0057847F /* ContainerViewController.swift */; };
+		418B34D6261762A00057847F /* ContainerViewControllerMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34D4261762A00057847F /* ContainerViewControllerMac.swift */; };
 		4191612E261372F800680146 /* FoxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191612D261372F800680146 /* FoxEntity.swift */; };
 		4191612F261372F800680146 /* FoxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191612D261372F800680146 /* FoxEntity.swift */; };
 		41916130261372F800680146 /* FoxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191612D261372F800680146 /* FoxEntity.swift */; };
@@ -149,7 +154,6 @@
 		4160A82A26117CB90066D9CC /* BaseLevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLevelScene.swift; sourceTree = "<group>"; };
 		417790C6260FA2A600642589 /* KurosAdventure (iOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KurosAdventure (iOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		417790C9260FA2A600642589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		417790CB260FA2A600642589 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		417790D0260FA2A600642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		417790D2260FA2A700642589 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
 		417790D5260FA2A700642589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -176,6 +180,9 @@
 		418B34922616C4530057847F /* HealthBarEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBarEntity.swift; sourceTree = "<group>"; };
 		418B349F2616C4960057847F /* UpdatableHealthBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatableHealthBarComponent.swift; sourceTree = "<group>"; };
 		418B34AC2616C5D70057847F /* UpdateHealthBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateHealthBarComponent.swift; sourceTree = "<group>"; };
+		418B34C3261761680057847F /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		418B34CA2617624B0057847F /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		418B34D4261762A00057847F /* ContainerViewControllerMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerMac.swift; sourceTree = "<group>"; };
 		4191612D261372F800680146 /* FoxEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxEntity.swift; sourceTree = "<group>"; };
 		41916137261374DB00680146 /* KuroCategoryMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuroCategoryMask.swift; sourceTree = "<group>"; };
 		41916141261379E400680146 /* ImpEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpEntity.swift; sourceTree = "<group>"; };
@@ -225,7 +232,10 @@
 		411D22762614C40F00B4109B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				418B34CA2617624B0057847F /* ContainerViewController.swift */,
+				418B34D4261762A00057847F /* ContainerViewControllerMac.swift */,
 				411D22772614C40F00B4109B /* PauseViewController.swift */,
+				418B34C3261761680057847F /* TitleViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -307,7 +317,6 @@
 				417790D7260FA2A700642589 /* Info.plist */,
 				417790D4260FA2A700642589 /* LaunchScreen.storyboard */,
 				417790CF260FA2A600642589 /* Main.storyboard */,
-				417790CB260FA2A600642589 /* SceneDelegate.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -605,6 +614,7 @@
 			files = (
 				411D229C2614C40F00B4109B /* NavigationFocusAnimationView.swift in Sources */,
 				41916142261379E400680146 /* ImpEntity.swift in Sources */,
+				418B34CB2617624B0057847F /* ContainerViewController.swift in Sources */,
 				411D22962614C40F00B4109B /* BackButtonContentView.swift in Sources */,
 				41916138261374DB00680146 /* KuroCategoryMask.swift in Sources */,
 				418B34A02616C4960057847F /* UpdatableHealthBarComponent.swift in Sources */,
@@ -618,6 +628,7 @@
 				411D228A2614C40F00B4109B /* LevelThumbView.swift in Sources */,
 				417791EB260FC98600642589 /* TouchButtonComponent.swift in Sources */,
 				411D229F2614C40F00B4109B /* LevelSectionView.swift in Sources */,
+				418B34C4261761680057847F /* TitleViewController.swift in Sources */,
 				411D22902614C40F00B4109B /* CheckmarkSelectedView.swift in Sources */,
 				411D22BE2614C52700B4109B /* LevelSectionsViewModel.swift in Sources */,
 				418B34932616C4530057847F /* HealthBarEntity.swift in Sources */,
@@ -632,7 +643,6 @@
 				411D22842614C40F00B4109B /* PauseViewController.swift in Sources */,
 				417790CA260FA2A600642589 /* AppDelegate.swift in Sources */,
 				411D22872614C40F00B4109B /* Color+Extensions.swift in Sources */,
-				417790CC260FA2A600642589 /* SceneDelegate.swift in Sources */,
 				411D22992614C40F00B4109B /* SelectionButtonContentView.swift in Sources */,
 				411D22B12614C47600B4109B /* CAAnimation+BackgroundColorAnimation.swift in Sources */,
 				417792B026101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */,
@@ -648,6 +658,7 @@
 				411D22852614C40F00B4109B /* PauseViewController.swift in Sources */,
 				411D22BF2614C52700B4109B /* LevelSectionsViewModel.swift in Sources */,
 				411D22A32614C40F00B4109B /* PageIndicatorView.swift in Sources */,
+				418B34D6261762A00057847F /* ContainerViewControllerMac.swift in Sources */,
 				411D229D2614C40F00B4109B /* NavigationFocusAnimationView.swift in Sources */,
 				41AF863326158CCA00D0F1FA /* HazardComponent.swift in Sources */,
 				41916143261379E400680146 /* ImpEntity.swift in Sources */,
@@ -664,6 +675,7 @@
 				41916139261374DB00680146 /* KuroCategoryMask.swift in Sources */,
 				411D22912614C40F00B4109B /* CheckmarkSelectedView.swift in Sources */,
 				417791C8260FA9D300642589 /* CharacterEntity.swift in Sources */,
+				418B34C5261761680057847F /* TitleViewController.swift in Sources */,
 				411D22942614C40F00B4109B /* PopoverActionButtonContentView.swift in Sources */,
 				411D22B52614C47600B4109B /* Font+DemoFonts.swift in Sources */,
 				418B34A12616C4960057847F /* UpdatableHealthBarComponent.swift in Sources */,
@@ -702,9 +714,11 @@
 				4191613A261374DB00680146 /* KuroCategoryMask.swift in Sources */,
 				411D22922614C40F00B4109B /* CheckmarkSelectedView.swift in Sources */,
 				417791C9260FA9D300642589 /* CharacterEntity.swift in Sources */,
+				418B34C6261761680057847F /* TitleViewController.swift in Sources */,
 				411D22952614C40F00B4109B /* PopoverActionButtonContentView.swift in Sources */,
 				411D22B62614C47600B4109B /* Font+DemoFonts.swift in Sources */,
 				418B34A22616C4960057847F /* UpdatableHealthBarComponent.swift in Sources */,
+				418B34CD2617624C0057847F /* ContainerViewController.swift in Sources */,
 				411D22982614C40F00B4109B /* BackButtonContentView.swift in Sources */,
 				411D228F2614C40F00B4109B /* OverlayView.swift in Sources */,
 				41916130261372F800680146 /* FoxEntity.swift in Sources */,
