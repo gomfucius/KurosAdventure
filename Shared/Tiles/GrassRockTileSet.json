@@ -23,7 +23,7 @@
          "image":"..\/SharedAssets.xcassets\/Decoration Tiles Platform Grass Rock.spriteatlas\/tile001.imageset\/tile001.png",
          "imageheight":16,
          "imagewidth":16
-        },
+        }, 
         {
          "id":2,
          "image":"..\/SharedAssets.xcassets\/Decoration Tiles Platform Grass Rock.spriteatlas\/tile002.imageset\/tile002.png",
@@ -362,5 +362,43 @@
         }],
  "tilewidth":16,
  "type":"tileset",
- "version":1.5
+ "version":1.5,
+ "wangsets":[
+        {
+         "colors":[
+                {
+                 "color":"#ff0000",
+                 "name":"",
+                 "probability":1,
+                 "tile":2
+                }],
+         "name":"Grass",
+         "tile":-1,
+         "type":"edge",
+         "wangtiles":[
+                {
+                 "tileid":0,
+                 "wangid":[0, 0, 1, 0, 1, 0, 0, 0]
+                }, 
+                {
+                 "tileid":1,
+                 "wangid":[0, 0, 1, 0, 1, 0, 1, 0]
+                }, 
+                {
+                 "tileid":2,
+                 "wangid":[0, 0, 0, 0, 1, 0, 1, 0]
+                }, 
+                {
+                 "tileid":3,
+                 "wangid":[1, 0, 1, 0, 1, 0, 1, 0]
+                }, 
+                {
+                 "tileid":13,
+                 "wangid":[1, 0, 1, 0, 1, 0, 0, 0]
+                }, 
+                {
+                 "tileid":15,
+                 "wangid":[1, 0, 0, 0, 1, 0, 1, 0]
+                }]
+        }]
 }
