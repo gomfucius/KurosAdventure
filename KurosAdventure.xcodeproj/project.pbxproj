@@ -100,6 +100,15 @@
 		417792B026101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */; };
 		417792B126101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */; };
 		417792B226101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */; };
+		418B34932616C4530057847F /* HealthBarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34922616C4530057847F /* HealthBarEntity.swift */; };
+		418B34942616C4530057847F /* HealthBarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34922616C4530057847F /* HealthBarEntity.swift */; };
+		418B34952616C4530057847F /* HealthBarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34922616C4530057847F /* HealthBarEntity.swift */; };
+		418B34A02616C4960057847F /* UpdatableHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B349F2616C4960057847F /* UpdatableHealthBarComponent.swift */; };
+		418B34A12616C4960057847F /* UpdatableHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B349F2616C4960057847F /* UpdatableHealthBarComponent.swift */; };
+		418B34A22616C4960057847F /* UpdatableHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B349F2616C4960057847F /* UpdatableHealthBarComponent.swift */; };
+		418B34AD2616C5D70057847F /* UpdateHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34AC2616C5D70057847F /* UpdateHealthBarComponent.swift */; };
+		418B34AE2616C5D70057847F /* UpdateHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34AC2616C5D70057847F /* UpdateHealthBarComponent.swift */; };
+		418B34AF2616C5D70057847F /* UpdateHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B34AC2616C5D70057847F /* UpdateHealthBarComponent.swift */; };
 		4191612E261372F800680146 /* FoxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191612D261372F800680146 /* FoxEntity.swift */; };
 		4191612F261372F800680146 /* FoxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191612D261372F800680146 /* FoxEntity.swift */; };
 		41916130261372F800680146 /* FoxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191612D261372F800680146 /* FoxEntity.swift */; };
@@ -164,6 +173,9 @@
 		41779246260FDCD800642589 /* TestMap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestMap.json; sourceTree = "<group>"; };
 		4177925A260FDCD800642589 /* GlideColliderTileSet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GlideColliderTileSet.json; sourceTree = "<group>"; };
 		417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxBackgroundEntity.swift; sourceTree = "<group>"; };
+		418B34922616C4530057847F /* HealthBarEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBarEntity.swift; sourceTree = "<group>"; };
+		418B349F2616C4960057847F /* UpdatableHealthBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatableHealthBarComponent.swift; sourceTree = "<group>"; };
+		418B34AC2616C5D70057847F /* UpdateHealthBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateHealthBarComponent.swift; sourceTree = "<group>"; };
 		4191612D261372F800680146 /* FoxEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxEntity.swift; sourceTree = "<group>"; };
 		41916137261374DB00680146 /* KuroCategoryMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuroCategoryMask.swift; sourceTree = "<group>"; };
 		41916141261379E400680146 /* ImpEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpEntity.swift; sourceTree = "<group>"; };
@@ -362,17 +374,27 @@
 			children = (
 				417791C6260FA9D300642589 /* CharacterEntity.swift */,
 				4191612D261372F800680146 /* FoxEntity.swift */,
-				417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */,
 				41916141261379E400680146 /* ImpEntity.swift */,
+				417792AF26101A7B00642589 /* ParallaxBackgroundEntity.swift */,
+				418B34912616C4380057847F /* UI */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		418B34912616C4380057847F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				418B34922616C4530057847F /* HealthBarEntity.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		4191614826137FE500680146 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				4191614926137FEA00680146 /* Player */,
 				41AF863126158CCA00D0F1FA /* HazardComponent.swift */,
+				4191614926137FEA00680146 /* Player */,
+				418B349F2616C4960057847F /* UpdatableHealthBarComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -381,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				4191614A26137FFE00680146 /* BumpAttackerComponent.swift */,
+				418B34AC2616C5D70057847F /* UpdateHealthBarComponent.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -565,6 +588,7 @@
 				41916142261379E400680146 /* ImpEntity.swift in Sources */,
 				411D22962614C40F00B4109B /* BackButtonContentView.swift in Sources */,
 				41916138261374DB00680146 /* KuroCategoryMask.swift in Sources */,
+				418B34A02616C4960057847F /* UpdatableHealthBarComponent.swift in Sources */,
 				4191612E261372F800680146 /* FoxEntity.swift in Sources */,
 				41AF863226158CCA00D0F1FA /* HazardComponent.swift in Sources */,
 				411D22C42614C52700B4109B /* SingleLevelSectionViewModel.swift in Sources */,
@@ -577,11 +601,13 @@
 				411D229F2614C40F00B4109B /* LevelSectionView.swift in Sources */,
 				411D22902614C40F00B4109B /* CheckmarkSelectedView.swift in Sources */,
 				411D22BE2614C52700B4109B /* LevelSectionsViewModel.swift in Sources */,
+				418B34932616C4530057847F /* HealthBarEntity.swift in Sources */,
 				4177919E260FA56F00642589 /* GameViewController.swift in Sources */,
 				411D22A22614C40F00B4109B /* PageIndicatorView.swift in Sources */,
 				411D22B42614C47600B4109B /* Font+DemoFonts.swift in Sources */,
 				417791A5260FA5E000642589 /* Scene.swift in Sources */,
 				411D228D2614C40F00B4109B /* OverlayView.swift in Sources */,
+				418B34AD2616C5D70057847F /* UpdateHealthBarComponent.swift in Sources */,
 				4191614B26137FFE00680146 /* BumpAttackerComponent.swift in Sources */,
 				411D22932614C40F00B4109B /* PopoverActionButtonContentView.swift in Sources */,
 				411D22842614C40F00B4109B /* PauseViewController.swift in Sources */,
@@ -598,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				418B34942616C4530057847F /* HealthBarEntity.swift in Sources */,
 				411D22C22614C52700B4109B /* LevelThumbViewModel.swift in Sources */,
 				411D22852614C40F00B4109B /* PauseViewController.swift in Sources */,
 				411D22BF2614C52700B4109B /* LevelSectionsViewModel.swift in Sources */,
@@ -608,6 +635,7 @@
 				411D22C52614C52700B4109B /* SingleLevelSectionViewModel.swift in Sources */,
 				411D22B22614C47600B4109B /* CAAnimation+BackgroundColorAnimation.swift in Sources */,
 				417791A6260FA5E000642589 /* Scene.swift in Sources */,
+				418B34AE2616C5D70057847F /* UpdateHealthBarComponent.swift in Sources */,
 				411D228B2614C40F00B4109B /* LevelThumbView.swift in Sources */,
 				411D22A02614C40F00B4109B /* LevelSectionView.swift in Sources */,
 				417792B126101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */,
@@ -619,6 +647,7 @@
 				417791C8260FA9D300642589 /* CharacterEntity.swift in Sources */,
 				411D22942614C40F00B4109B /* PopoverActionButtonContentView.swift in Sources */,
 				411D22B52614C47600B4109B /* Font+DemoFonts.swift in Sources */,
+				418B34A12616C4960057847F /* UpdatableHealthBarComponent.swift in Sources */,
 				411D22972614C40F00B4109B /* BackButtonContentView.swift in Sources */,
 				411D228E2614C40F00B4109B /* OverlayView.swift in Sources */,
 				4191612F261372F800680146 /* FoxEntity.swift in Sources */,
@@ -633,6 +662,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				418B34952616C4530057847F /* HealthBarEntity.swift in Sources */,
 				411D22C32614C52700B4109B /* LevelThumbViewModel.swift in Sources */,
 				411D22862614C40F00B4109B /* PauseViewController.swift in Sources */,
 				411D22C02614C52700B4109B /* LevelSectionsViewModel.swift in Sources */,
@@ -643,6 +673,7 @@
 				411D22C62614C52700B4109B /* SingleLevelSectionViewModel.swift in Sources */,
 				411D22B32614C47600B4109B /* CAAnimation+BackgroundColorAnimation.swift in Sources */,
 				417791A7260FA5E000642589 /* Scene.swift in Sources */,
+				418B34AF2616C5D70057847F /* UpdateHealthBarComponent.swift in Sources */,
 				411D228C2614C40F00B4109B /* LevelThumbView.swift in Sources */,
 				411D22A12614C40F00B4109B /* LevelSectionView.swift in Sources */,
 				417792B226101A7B00642589 /* ParallaxBackgroundEntity.swift in Sources */,
@@ -654,6 +685,7 @@
 				417791C9260FA9D300642589 /* CharacterEntity.swift in Sources */,
 				411D22952614C40F00B4109B /* PopoverActionButtonContentView.swift in Sources */,
 				411D22B62614C47600B4109B /* Font+DemoFonts.swift in Sources */,
+				418B34A22616C4960057847F /* UpdatableHealthBarComponent.swift in Sources */,
 				411D22982614C40F00B4109B /* BackButtonContentView.swift in Sources */,
 				411D228F2614C40F00B4109B /* OverlayView.swift in Sources */,
 				41916130261372F800680146 /* FoxEntity.swift in Sources */,

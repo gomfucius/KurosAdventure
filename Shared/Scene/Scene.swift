@@ -21,10 +21,15 @@ class Scene: BaseLevelScene {
         mapContact(between: GlideCategoryMask.player, and: KuroCategoryMask.npc)
 
         let character = CharacterEntity(initialNodePosition: defaultPlayerStartLocation)
+        if let updatableHealthBarComponent = healthBarEntity.component(ofType: UpdatableHealthBarComponent.self) {
+            let updateHealthBarComponent = UpdateHealthBarComponent(updatableHealthBarComponent: updatableHealthBarComponent)
+            character.addComponent(updateHealthBarComponent)
+        }
         addEntity(character)
         addEntity(patrollingWithWallContactNPC(initialNodePosition: TiledPoint(30, 25).point(with: tileSize)))
         addEntity(patrollingWithGapContactNPC(initialNodePosition: TiledPoint(30, 25).point(with: tileSize)))
         addEntity(patrollingWithGapContactNPC(initialNodePosition: TiledPoint(32, 45).point(with: tileSize)))
+        addEntity(healthBarEntity)
     }
     
     private func platformEntity(at position: CGPoint) -> GlideEntity {
@@ -77,6 +82,10 @@ class Scene: BaseLevelScene {
         
         return npc
     }
+    
+    private lazy var healthBarEntity: HealthBarEntity = {
+        return HealthBarEntity(numberOfHearts: 3)
+    }()
 }
 
 //

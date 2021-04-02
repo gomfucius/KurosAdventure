@@ -77,8 +77,10 @@ final class CharacterEntity: GlideEntity {
         let bouncerComponent = BouncerComponent(contactCategoryMasks: KuroCategoryMask.npc, configuration: bouncerConfiguration)
         addComponent(bouncerComponent)
         
-        let healthComponent = HealthComponent(maximumHealth: 1)
+        let healthComponent = HealthComponent(maximumHealth: 3)
         addComponent(healthComponent)
+        
+        addComponent(BlinkerComponent(blinkingDuration: 1.0))
     }
     
     private func setupTextureAnimation() {
