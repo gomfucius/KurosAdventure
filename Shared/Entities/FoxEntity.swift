@@ -26,7 +26,7 @@ class FoxEntity: GlideEntity {
                                                   offset: .zero,
                                                   leftHitPointsOffsets: (10, 10),
                                                   rightHitPointsOffsets: (10, 10),
-                                                  topHitPointsOffsets: (5, 5),
+                                                  topHitPointsOffsets: (15, 15),
                                                   bottomHitPointsOffsets: (5, 5))
         addComponent(colliderComponent)
         

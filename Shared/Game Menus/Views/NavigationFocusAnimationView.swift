@@ -78,7 +78,6 @@ class NavigationFocusAnimationView: View {
         animate()
     }
     
-    // swiftlint:disable:next function_body_length
     func animate() {
         #if os(OSX)
         guard let innerViewLayer = innerView.layer else {

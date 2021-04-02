@@ -65,7 +65,7 @@ class BaseLevelScene: GlideScene {
     // MARK: - GlideScene
     
     override func setupScene() {
-        cameraEntity.component(ofType: CameraComponent.self)?.configuration.fieldOfViewWidth = 1000
+        cameraEntity.component(ofType: CameraComponent.self)?.configuration.fieldOfViewWidth = 800
         
         let groundBackground = tileMaps.decorationTileMaps[0]
         groundBackground.position = collisionTileMapNode?.position ?? .zero

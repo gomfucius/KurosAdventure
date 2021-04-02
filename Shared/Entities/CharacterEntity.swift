@@ -10,17 +10,15 @@ import GameplayKit
 
 final class CharacterEntity: GlideEntity {
     
+    static let colliderSize = CGSize(width: 28, height: 28)
+
     override func setup() {
-//        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 16, height: 16))
-//        spriteNodeComponent.spriteNode.texture = SKTexture(imageNamed: "character_walk_0")
-//        addComponent(spriteNodeComponent)
-        
-        let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 24, height: 24))
-        // Don't forget to specify a z position for it, if you have a lot of nodes
+        let spriteNodeComponent = SpriteNodeComponent(nodeSize: .zero)
+        spriteNodeComponent.offset = CGPoint(x: 0, y: 0)
         spriteNodeComponent.zPositionContainer = DemoZPositionContainer.player
         spriteNodeComponent.spriteNode.color = .blue
         addComponent(spriteNodeComponent)
-        
+
         var kinematicsBodyConfiguration = KinematicsBodyComponent.sharedConfiguration
         kinematicsBodyConfiguration.gravity = 60
         kinematicsBodyConfiguration.maximumVerticalVelocity = 20
@@ -28,14 +26,14 @@ final class CharacterEntity: GlideEntity {
         kinematicsBodyConfiguration.metersToScreenPoints = 27
         let kinematicsBodyComponent = KinematicsBodyComponent(configuration: kinematicsBodyConfiguration)
         addComponent(kinematicsBodyComponent)
-        
+
         // Make the player character a collidable entity
         let colliderComponent = ColliderComponent(
             categoryMask: GlideCategoryMask.player,
-            size: CGSize(width: 24, height: 24),
+            size: CharacterEntity.colliderSize,
             offset: .zero,
-            leftHitPointsOffsets: (5, 5),
-            rightHitPointsOffsets: (5, 5),
+            leftHitPointsOffsets: (10, 10),
+            rightHitPointsOffsets: (10, 10),
             topHitPointsOffsets: (5, 5),
             bottomHitPointsOffsets: (5, 5))
         addComponent(colliderComponent)
@@ -43,23 +41,22 @@ final class CharacterEntity: GlideEntity {
         // Make it be able to collide with your collidable tile map
         let colliderTileHolderComponent = ColliderTileHolderComponent()
         addComponent(colliderTileHolderComponent)
-        
+
         let snapperComponent = SnapperComponent()
         addComponent(snapperComponent)
-        
+
         let playableCharacterComponent = PlayableCharacterComponent(playerIndex: 0)
         addComponent(playableCharacterComponent)
-        
-        setupTextureAnimation()
+
         let characterComponent = CharacterComponent()
         addComponent(characterComponent)
-        
+
         var config = HorizontalMovementComponent.sharedConfiguration
-        config.acceleration = 70
-        config.deceleration = 90
+        config.acceleration = 80
+        config.deceleration = 80
         let horizontalMovementComponent = HorizontalMovementComponent(movementStyle: .accelerated, configuration: config)
         addComponent(horizontalMovementComponent)
-        
+
         var jumpConfiguration = JumpComponent.sharedConfiguration
         jumpConfiguration.jumpingVelocity = 20
         jumpConfiguration.fasterVerticalVelocityDiff = 1
@@ -67,23 +64,25 @@ final class CharacterEntity: GlideEntity {
         jumpConfiguration.isCornerJumpsEnabled = true
         let jumpComponent = JumpComponent(configuration: jumpConfiguration)
         addComponent(jumpComponent)
-        
+
         let bumpAttackerComponent = BumpAttackerComponent()
         addComponent(bumpAttackerComponent)
-        
+
         var bouncerConfiguration = BouncerComponent.sharedConfiguration
         bouncerConfiguration.verticalBouncingVelocity = 16
         bouncerConfiguration.restTimeBetweenBounces = 0.0 // Make it bounceable right away so we can jump on one enemy to another
         let bouncerComponent = BouncerComponent(contactCategoryMasks: KuroCategoryMask.npc, configuration: bouncerConfiguration)
         addComponent(bouncerComponent)
-        
+
         let healthComponent = HealthComponent(maximumHealth: 3)
         addComponent(healthComponent)
-        
+
         addComponent(BlinkerComponent(blinkingDuration: 1.0))
+        
+        setupTextureAnimations()
     }
     
-    private func setupTextureAnimation() {
+    private func setupTextureAnimations() {
         let animationSize = CGSize(width: 64, height: 64)
         let animationOffset = CGPoint(x: 0, y: 15)
         
