@@ -17,14 +17,13 @@ final class GameViewController: ViewControllerType {
     }
     
     override func loadView() {
-        super.loadView()
-        
+        // Don't call super.loadView(), it'll crash due to nib not found
         self.view = SKView()
         #if os(iOS)
         self.view.isMultipleTouchEnabled = true
         #endif
     }
-    
+
     // MARK: - Private
     
     private var scene: BaseLevelScene?
@@ -49,9 +48,18 @@ final class GameViewController: ViewControllerType {
         scene.scaleMode = .resizeFill
         self.scene = scene
         
+        guard let view = self.view as? SKView else {
+            return
+        }
+        
+        #if DEBUG
+        view.showsFPS = true
+        view.showsNodeCount = true
+        #endif
+        
         /// Then present your scene
-        (view as? SKView)?.ignoresSiblingOrder = true
-        (view as? SKView)?.presentScene(scene)
+        view.ignoresSiblingOrder = true
+        view.presentScene(scene)
     }
     
     private func loadTextureAtlases(for level: Level?) {

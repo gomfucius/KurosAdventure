@@ -53,7 +53,7 @@ class TitleViewController: NavigatableViewController {
     }()
     
     lazy var logoImageView: ImageView = {
-        let view = ImageView(image: Image(imageLiteralResourceName: "button_up"))
+        let view = ImageView(image: Image(imageLiteralResourceName: "fox_idle_0"))
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -71,9 +71,9 @@ class TitleViewController: NavigatableViewController {
         return viewController
     }()
     
-    lazy var creditsButton: NavigatableButton = {
+    lazy var startButton: NavigatableButton = {
         let button = NavigatableButton(frame: .zero)
-        button.contentView = ActionButtonContentView(title: "Credits")
+        button.contentView = ActionButtonContentView(title: "Start Game")
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -131,7 +131,7 @@ class TitleViewController: NavigatableViewController {
         
         view.addLayoutGuide(accessoriesLayoutGuide)
         view.addSubview(sectionInfoLabel)
-        view.addSubview(creditsButton)
+        view.addSubview(startButton)
         #if os(OSX)
         view.addSubview(quitGameButton)
         #endif
@@ -165,13 +165,13 @@ class TitleViewController: NavigatableViewController {
             sectionInfoLabel.leadingAnchor.constraint(greaterThanOrEqualTo: accessoriesLayoutGuide.leadingAnchor),
             sectionInfoLabel.bottomAnchor.constraint(equalTo: accessoriesLayoutGuide.bottomAnchor, constant: -20.0),
             
-            creditsButton.centerXAnchor.constraint(equalTo: logoImageView.centerXAnchor),
-            creditsButton.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: -20.0)
+            startButton.centerXAnchor.constraint(equalTo: logoImageView.centerXAnchor),
+            startButton.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: -20.0)
             ])
         #if os(OSX)
         NSLayoutConstraint.activate([
-            quitGameButton.centerXAnchor.constraint(equalTo: creditsButton.centerXAnchor),
-            quitGameButton.topAnchor.constraint(equalTo: creditsButton.bottomAnchor, constant: 20.0)
+            quitGameButton.centerXAnchor.constraint(equalTo: startButton.centerXAnchor),
+            quitGameButton.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: 20.0)
             ])
         #endif
         
@@ -205,40 +205,40 @@ class TitleViewController: NavigatableViewController {
             }
         }
         
-        addNavigatableChild(sectionsScrollViewController, with: sectionsLayoutGuide)
-        
-        negativeSideObserver = sectionsScrollViewController.observe(\.hasPagesOnNegativeSide, options: [.new]) { [weak self] (_, change) in
-            self?.negativeSideIndicatorView.isAnimating = change.newValue == true
-        }
-        positiveSideObserver = sectionsScrollViewController.observe(\.hasPagesOnPositiveSide, options: [.new]) { [weak self] (_, change) in
-            self?.positiveSideIndicatorView.isAnimating = change.newValue == true
-        }
-        
-        negativeSideIndicatorView.isAnimating = sectionsScrollViewController.hasPagesOnNegativeSide == true
-        positiveSideIndicatorView.isAnimating = sectionsScrollViewController.hasPagesOnPositiveSide == true
-        
-        nextPageObservation = NotificationCenter.default.addObserver(forName: .NavigatableButtonScrollViewDidScrollToNextPage, object: sectionsScrollViewController, queue: nil) { [weak self] _ in
-            self?.positiveSideIndicatorView.animateSelect()
-        }
-        previousPageObservation = NotificationCenter.default.addObserver(forName: .NavigatableButtonScrollViewDidScrollToPreviousPage,
-                                                                         object: sectionsScrollViewController,
-                                                                         queue: nil) { [weak self] _ in
-                                                                            self?.negativeSideIndicatorView.animateSelect()
-        }
+//        addNavigatableChild(sectionsScrollViewController, with: sectionsLayoutGuide)
+//
+//        negativeSideObserver = sectionsScrollViewController.observe(\.hasPagesOnNegativeSide, options: [.new]) { [weak self] (_, change) in
+//            self?.negativeSideIndicatorView.isAnimating = change.newValue == true
+//        }
+//        positiveSideObserver = sectionsScrollViewController.observe(\.hasPagesOnPositiveSide, options: [.new]) { [weak self] (_, change) in
+//            self?.positiveSideIndicatorView.isAnimating = change.newValue == true
+//        }
+//
+//        negativeSideIndicatorView.isAnimating = sectionsScrollViewController.hasPagesOnNegativeSide == true
+//        positiveSideIndicatorView.isAnimating = sectionsScrollViewController.hasPagesOnPositiveSide == true
+//
+//        nextPageObservation = NotificationCenter.default.addObserver(forName: .NavigatableButtonScrollViewDidScrollToNextPage, object: sectionsScrollViewController, queue: nil) { [weak self] _ in
+//            self?.positiveSideIndicatorView.animateSelect()
+//        }
+//        previousPageObservation = NotificationCenter.default.addObserver(forName: .NavigatableButtonScrollViewDidScrollToPreviousPage,
+//                                                                         object: sectionsScrollViewController,
+//                                                                         queue: nil) { [weak self] _ in
+//                                                                            self?.negativeSideIndicatorView.animateSelect()
+//        }
         
         #if os(OSX)
-        append(children: [creditsButton, quitGameButton])
+        append(children: [startButton, quitGameButton])
         #else
-        append(children: [creditsButton])
+        append(children: [startButton])
         #endif
         
-        creditsButton.rightElement = sectionsScrollViewController
-        sectionsScrollViewController.leftElement = creditsButton
+        startButton.rightElement = sectionsScrollViewController
+        sectionsScrollViewController.leftElement = startButton
         
         #if os(OSX)
         quitGameButton.rightElement = sectionsScrollViewController
-        creditsButton.downElement = quitGameButton
-        quitGameButton.upElement = creditsButton
+        startButton.downElement = quitGameButton
+        quitGameButton.upElement = startButton
         #endif
     }
     
@@ -290,14 +290,14 @@ class TitleViewController: NavigatableViewController {
     }
     
     override func didSelect(focusedChild: NavigatableElement?, context: Any?) {
-//        if focusedChild === creditsButton {
-//            let creditsViewController = CreditsViewController()
-//            AppDelegate.shared.containerViewController?.placeContentViewController(creditsViewController)
-//        } else if focusedChild === quitGameButton {
-//            #if os(OSX)
-//            NSApp.terminate(self)
-//            #endif
-//        }
+        if focusedChild === startButton {
+            let creditsViewController = GameViewController()
+            AppDelegate.shared.containerViewController?.placeContentViewController(creditsViewController)
+        } else if focusedChild === quitGameButton {
+            #if os(OSX)
+            NSApp.terminate(self)
+            #endif
+        }
     }
     
     deinit {
@@ -309,4 +309,3 @@ class TitleViewController: NavigatableViewController {
         }
     }
 }
-
