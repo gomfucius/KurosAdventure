@@ -75,14 +75,33 @@ class ContainerViewController: GCEventViewController {
     }
     
     func placeContentViewController(_ viewController: NSViewController) {
-        if let contentViewController = contentViewController {
-            contentViewController.view.removeFromSuperview()
-            contentViewController.removeFromParent()
+        let fadeDuration: TimeInterval = 0.5
+        
+        func add(animated: Bool) {
+            if let containerView = containerView {
+                self.contentViewController = viewController
+                if animated {
+                    // TODO: Animation not working
+                    self.addChild(viewController, in: containerView)
+                } else {
+                    addChild(viewController, in: containerView)
+                }
+            }
         }
         
-        if let containerView = containerView {
-            self.contentViewController = viewController
-            addChild(viewController, in: containerView)
+        if let contentViewController = contentViewController {
+            // swiftlint:disable no_space_in_method_call
+            NSAnimationContext.runAnimationGroup { context in
+                context.duration = fadeDuration
+                contentViewController.view.animator().alphaValue = 0
+            } completionHandler: {
+                contentViewController.view.alphaValue = 1
+                contentViewController.view.removeFromSuperview()
+                contentViewController.removeFromParent()
+                add(animated: true)
+            }
+        } else {
+            add(animated: false)
         }
     }
     

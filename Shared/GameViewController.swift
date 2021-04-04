@@ -8,12 +8,32 @@
 import GlideEngine
 import SpriteKit
 
+class LoadingScene: SKScene {
+    override func sceneDidLoad() {
+        backgroundColor = .red
+    }
+}
+
+class BlankScene: SKScene {
+    override func sceneDidLoad() {
+        backgroundColor = .white
+    }
+}
+
 final class GameViewController: ViewControllerType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        displayLevel(decorationTilesAtlas: nil)
+        (self.view as? SKView)?.presentScene(BlankScene())
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.displayLevel(decorationTilesAtlas: nil)
+        }
     }
     
     override func loadView() {
@@ -38,13 +58,8 @@ final class GameViewController: ViewControllerType {
             fatalError("Couldn't load the level file")
         }
 
-        // Create your scene
         let scene = Scene(levelName: "First", tileMaps: tileMaps)
         scene.glideSceneDelegate = self
-
-        /// Add your decoration tile maps in appropriate z position container nodes.
-        /// e.g. addChild(frontDecorationBackground, in: DemoZPositionContainer.frontDecoration)
-        /// Alternatively, do this in a custom `GlideScene` subclass.
         scene.scaleMode = .resizeFill
         self.scene = scene
         
@@ -57,9 +72,9 @@ final class GameViewController: ViewControllerType {
         view.showsNodeCount = true
         #endif
         
-        /// Then present your scene
         view.ignoresSiblingOrder = true
-        view.presentScene(scene)
+        let reveal = SKTransition.doorsOpenHorizontal(withDuration: 0.5) // Not working yet
+        view.presentScene(scene, transition: reveal)
     }
     
     private func loadTextureAtlases(for level: Level?) {
@@ -68,7 +83,6 @@ final class GameViewController: ViewControllerType {
         SKTextureAtlas.preloadTextureAtlases([decorationTilesAtlas]) {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                
                 self.displayLevel(decorationTilesAtlas: SKTextureAtlas(named: "Decoration Tiles Platform Grass Rock"))
             }
         }

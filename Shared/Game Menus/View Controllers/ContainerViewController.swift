@@ -20,14 +20,29 @@ class ContainerViewController: GCEventViewController {
     }
     
     func placeContentViewController(_ viewController: UIViewController) {
-        if let contentViewController = contentViewController {
-            contentViewController.view.removeFromSuperview()
-            contentViewController.removeFromParent()
+        func add(animated: Bool) {
+            if let containerView = containerView {
+                self.contentViewController = viewController
+                if animated {
+                    UIView.animate(withDuration: 0.5) {
+                        self.addChild(viewController, in: containerView)
+                    }
+                } else {
+                    addChild(viewController, in: containerView)
+                }
+            }
         }
         
-        if let containerView = containerView {
-            self.contentViewController = viewController
-            addChild(viewController, in: containerView)
+        if let contentViewController = contentViewController {
+            UIView.animate(withDuration: 0.5, animations: {
+                contentViewController.view.alpha = 0.0
+            }, completion: { _ in
+                contentViewController.view.removeFromSuperview()
+                contentViewController.removeFromParent()
+                add(animated: true)
+            })
+        } else {
+            add(animated: false)
         }
     }
     
